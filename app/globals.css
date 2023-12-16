@@ -6,9 +6,38 @@
 
 body {
   font-family: "Inter", sans-serif;
+  color: "#fff";
+  background-color: rgba(2, 15, 8, 0.5);
+}
+
+.container {
+  outline: 1px dotted green;
 }
 
 @layer utilities {
+  .underline-on-hover {
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .underline-on-hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .underline-on-hover:hover::before,
+  .underline-on-hover:focus::before,
+  .underline-on-hover:active::before {
+    transform: scaleX(1);
+  }
+
   .flex-center {
     @apply flex justify-center items-center;
   }
