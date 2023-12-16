@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { MENU_ITEMS } from "@/constants";
 import {

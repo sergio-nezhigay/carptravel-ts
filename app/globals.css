@@ -90,6 +90,59 @@ body {
   .home {
     @apply home-bg-mob md:home-bg-tab lg:home-bg-desk relative bg-[#D9D9D9] bg-cover bg-center;
   }
+  .about-bg-mob {
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      url(/images/about-bg-320.jpg);
+    background-image:
+      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      -webkit-image-set(url(/images/about-bg-320.webp) type("image/webp") 1x, url(/images/about-bg-320@2x.webp)
+            type("image/webp") 2x, url(/images/about-bg-320.jpg) 1x, url(/images/about-bg-320@2x.jpg)
+            2x);
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      image-set(
+        url(/images/about-bg-320.webp) type("image/webp") 1x,
+        url(/images/about-bg-320@2x.webp) type("image/webp") 2x,
+        url(/images/about-bg-320.jpg) 1x,
+        url(/images/about-bg-320@2x.jpg) 2x
+      );
+  }
+  .about-bg-tab {
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      url(/images/about-bg-768.jpg);
+    background-image:
+      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      -webkit-image-set(url(/images/about-bg-768.webp) type("image/webp") 1x, url(/images/about-bg-768@2x.webp)
+            type("image/webp") 2x, url(/images/about-bg-768.jpg) 1x, url(/images/about-bg-768@2x.jpg)
+            2x);
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      image-set(
+        url(/images/about-bg-768.webp) type("image/webp") 1x,
+        url(/images/about-bg-768@2x.webp) type("image/webp") 2x,
+        url(/images/about-bg-768.jpg) 1x,
+        url(/images/about-bg-768@2x.jpg) 2x
+      );
+  }
+  .about-bg-desk {
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      url(/images/about-bg-1280.jpg);
+    background-image:
+      linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      -webkit-image-set(url(/images/about-bg-1280.webp) type("image/webp") 1x, url(/images/about-bg-1280@2x.webp)
+            type("image/webp") 2x, url(/images/about-bg-1280.jpg) 1x, url(/images/about-bg-1280@2x.jpg)
+            2x);
+    background-image: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
+      image-set(
+        url(/images/about-bg-1280.webp) type("image/webp") 1x,
+        url(/images/about-bg-1280@2x.webp) type("image/webp") 2x,
+        url(/images/about-bg-1280.jpg) 1x,
+        url(/images/about-bg-1280@2x.jpg) 2x
+      );
+  }
+
+  .about {
+    @apply about-bg-mob md:about-bg-tab xl:about-bg-desk relative bg-[#D9D9D9] bg-cover bg-center;
+  }
+
   .underline-on-hover {
     position: relative;
     text-decoration: none;

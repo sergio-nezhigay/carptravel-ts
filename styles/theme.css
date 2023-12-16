@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 @layer utilities {
+  .section {
+    @apply py-[54px] md:py-[64px] lg:py-[104px];
+  }
   .body-extralight {
     @apply text-[14px] font-extralight leading-5 md:text-[16px] lg:text-[18px] lg:leading-6;
   }
 
   .h1-thin {
-    @apply text-[40px] md:text-[67px] font-thin md:leading-[81px] leading-[56px] lg:text-[98px] lg:leading-[118px] tracking-tighter uppercase;
+    @apply text-[40px] md:text-[67px] font-thin md:leading-[81px] leading-[56px] lg:text-[98px] lg:leading-[118px] tracking-[-0.04em] uppercase;
   }
 
   .background-light850_dark100 {
