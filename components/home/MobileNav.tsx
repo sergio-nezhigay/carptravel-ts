@@ -15,7 +15,7 @@ import {
 function MobileNav() {
   return (
     <Sheet>
-      <SheetTrigger className="text-[14px] leading-[17px] tracking-widest text-white">
+      <SheetTrigger className="text-[14px] leading-[17px] tracking-widest text-white md:hidden">
         MENU
       </SheetTrigger>
       <SheetContent className="flex-center w-full border-none bg-[#010A05BF] px-5 py-[43px]">
