@@ -13,7 +13,7 @@ function Home() {
         </header>
         <div className="md:grid md:grid-cols-[auto,230px] lg:grid-cols-[auto,305px] ">
           <Slogan />
-          <h1 className="h1-thin max-md:mb-6  md:col-start-1 md:row-span-2 md:row-start-1 ">
+          <h1 className="title-thin max-md:mb-6  md:col-start-1 md:row-span-2 md:row-start-1 ">
             <span className="font-medium">Uncover</span> Carpathian’s Secrets
           </h1>
           <p className="w-[157px] text-[10px] font-extralight leading-4 max-md:mb-6 md:col-start-1 md:row-start-3 md:w-[267px] md:self-end md:text-[14px] md:tracking-widest lg:w-full lg:text-[16px] lg:leading-6">

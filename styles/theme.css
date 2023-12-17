@@ -10,7 +10,7 @@
     @apply text-[14px] font-extralight leading-5 md:text-[16px] lg:text-[18px] lg:leading-6;
   }
 
-  .h1-thin {
+  .title-thin {
     @apply text-[40px] md:text-[67px] font-thin md:leading-[81px] leading-[56px] lg:text-[98px] lg:leading-[118px] tracking-[-0.04em] uppercase;
   }
 
