@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import { EffectFade } from "swiper/modules";
+import { EffectFade, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SERVICES_LIST } from "@/constants";
 
@@ -25,8 +25,12 @@ function Services() {
         loop={true}
         effect="fade"
         speed={1000}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         fadeEffect={{ crossFade: true }}
-        modules={[EffectFade]}
+        modules={[Autoplay, EffectFade]}
       >
         {SERVICES_LIST.map((service, indexCurrent) => (
           <SwiperSlide key={service.title} className="relative ">
@@ -82,8 +86,7 @@ function Services() {
                         );
                       })}
                     </ul>
-
-                    <p className="text-[14px] font-extralight leading-5  md:text-justify md:text-[13px] lg:ml-auto lg:w-[293px] lg:text-[18px] lg:leading-6 ">
+                    <p className="body-extralight-13 md:text-justify lg:ml-auto lg:w-[293px]">
                       {service.description}
                     </p>
                   </div>

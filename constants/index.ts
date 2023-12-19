@@ -48,3 +48,52 @@ export const SERVICES_LIST = [
     imageBG: "/services-bg-5.jpg",
   },
 ];
+
+export const CARREER_ADVANTAGES = [
+  {
+    title: "Professional development",
+    description:
+      "We offer growth opportunities and a creative environment to nurture your talents.",
+  },
+  {
+    title: "Teamwork",
+    description:
+      "Join our close-knit family, where support and inspiration abound.",
+  },
+  {
+    title: "Stimulating work environment",
+    description: "Flexibility and remote options for a comfortable experience.",
+  },
+  {
+    title: "Exciting challenges",
+    description:
+      "Unleash your potential through unforgettable projects showcasing Carpathian beauty.",
+  },
+];
+
+export const galleryImages = [
+  {
+    title: "Mountines",
+    fileName: "gallery1.jpg",
+  },
+  {
+    title: "Lake",
+    fileName: "gallery2.jpg",
+  },
+  {
+    title: "Tree",
+    fileName: "gallery3.jpg",
+  },
+  {
+    title: "Mountines",
+    fileName: "gallery1.jpg",
+  },
+  {
+    title: "Lake",
+    fileName: "gallery2.jpg",
+  },
+  {
+    title: "Tree",
+    fileName: "gallery3.jpg",
+  },
+];

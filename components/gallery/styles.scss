@@ -1,0 +1,32 @@
+.horizontal {
+  .swiper-slide {
+    box-shadow: 0px 0px 100px 0px #09141080;
+    cursor: grab;
+    width: 17%;
+    height: 87px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition:
+      width 800ms,
+      height 800ms;
+
+    &.swiper-slide-next {
+      opacity: 100%;
+      width: 58%;
+      height: 294px;
+      & .overlay {
+        opacity: 0;
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 24.4%;
+      height: 225px;
+
+      &.swiper-slide-next {
+        width: 47.3%;
+        height: 429px;
+      }
+    }
+  }
+}
