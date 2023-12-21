@@ -8,10 +8,11 @@ import useFormPersist from "react-hook-form-persist";
 
 import { Form } from "@/components/ui/form";
 import { careerFormSchema } from "./schema";
-import { Button } from "../ui/button";
+
 import Field from "./Field";
 import CheckboxWithText from "./CheckboxWithText";
 import SuccessMessage from "./SuccessMessage";
+import SubmitButton from "./SubmitButton";
 
 function CareerForm() {
   const [successMessage, setSuccessMessage] = React.useState<string | null>(
@@ -44,7 +45,6 @@ function CareerForm() {
   useFormPersist("careerForm", {
     watch,
     setValue,
-    storage: window.localStorage,
   });
 
   async function onSubmit(values: z.infer<typeof careerFormSchema>) {
@@ -118,13 +118,7 @@ function CareerForm() {
               control={control}
               register={register}
             />
-            <Button
-              type="submit"
-              className="underline-on-hover ml-auto block p-0 text-[30px] font-medium uppercase leading-9 max-md:mt-4 md:mt-[-8px]"
-              disabled={formState.isSubmitting}
-            >
-              {formState.isSubmitting ? "Sending..." : "Send"}
-            </Button>
+            <SubmitButton isSubmitting={formState.isSubmitting} />
           </div>
           <SuccessMessage message={successMessage} />
         </form>

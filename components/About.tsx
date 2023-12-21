@@ -24,7 +24,7 @@ function About() {
             enriching your spiritual world and creating unforgettable memories.
           </p>
         </div>
-        <div className="body-extralight w-[182px] leading-5 max-md:mb-10 max-md:ml-auto md:col-span-2 md:w-[221.3px] md:self-end lg:col-span-1 lg:col-start-3 lg:row-start-3 lg:w-[296px]">
+        <div className="body-extralight w-[182px]  max-md:mb-10 max-md:ml-auto md:col-span-2 md:w-[221.3px] md:self-end lg:col-span-1 lg:col-start-3 lg:row-start-3 lg:w-[296px]">
           <p className="font-normal uppercase">
             From vacationers
             <span className="ml-auto block w-fit"> to active travelers</span>

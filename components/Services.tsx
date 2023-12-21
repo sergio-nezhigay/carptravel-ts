@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { EffectFade, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,15 +8,20 @@ import { SERVICES_LIST } from "@/constants";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { Button } from "./ui/button";
 
 function Services() {
   const swiperRef = useRef() as any;
+  const [currentService, setcurrentService] = useState(0);
 
   const goToSlide = (index: number) => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideTo(index);
+      setcurrentService(index);
     }
   };
+
+  console.log("🚀 ~ file: Services.tsx:22 ~ test:", currentService);
   return (
     <section id="services">
       <h2 className="sr-only">Our Services</h2>
@@ -25,10 +30,10 @@ function Services() {
         loop={true}
         effect="fade"
         speed={1000}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // }}
         fadeEffect={{ crossFade: true }}
         modules={[Autoplay, EffectFade]}
       >
@@ -66,6 +71,9 @@ function Services() {
                             className="md:flex lg:justify-between"
                           >
                             <button
+                              tabIndex={
+                                indexCurrent === currentService ? 0 : -1
+                              }
                               onClick={() => {
                                 goToSlide(index);
                               }}

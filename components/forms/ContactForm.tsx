@@ -8,7 +8,7 @@ import useFormPersist from "react-hook-form-persist";
 
 import { contactFormSchema } from "./schema";
 import { Form } from "@/components/ui/form";
-import { Button } from "../ui/button";
+import SubmitButton from "./SubmitButton";
 import Field from "./Field";
 import SuccessMessage from "./SuccessMessage";
 
@@ -30,10 +30,10 @@ const ContactForm: React.FC = () => {
   async function onSubmit(values: z.infer<typeof contactFormSchema>) {
     console.log("Form values are:", values);
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    form.reset();
     setSuccessMessage("Your message has been successfully sent!");
     await new Promise((resolve) => setTimeout(resolve, 3000));
     setSuccessMessage("");
-    form.reset();
   }
   return (
     <div className="lg:w-1/2">
@@ -72,12 +72,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div className="md:flex md:items-start">
             <SuccessMessage message={successMessage} />
-            <Button
-              type="submit"
-              className="underline-on-hover ml-auto block p-0 text-[30px] font-medium uppercase leading-9 max-md:mt-4 md:mt-[-8px]"
-            >
-              Send
-            </Button>
+            <SubmitButton isSubmitting={formState.isSubmitting} />
           </div>
         </form>
       </Form>

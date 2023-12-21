@@ -2,19 +2,16 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import SwiperCore, { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import { GALLERY_IMAGES } from "@/constants";
 import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
+
 import "swiper/css/navigation";
 
 import "./styles.scss";
-// import "./styles.css";
+
 import Image from "next/image";
 import { Button } from "../ui/button";
-// SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
 const Gallery: React.FC = () => {
   return (
@@ -35,7 +32,7 @@ const Gallery: React.FC = () => {
           spaceBetween={24}
           wrapperTag="ul"
           modules={[Pagination, Navigation]}
-          className="horizontal h-[294px] w-full max-md:hidden lg:h-[429px]"
+          className="horizontal h-[294px] w-full max-md:!hidden lg:h-[429px]"
         >
           {GALLERY_IMAGES.map(({ title, fileName }) => (
             <SwiperSlide key={title} tag="li" className="relative">
@@ -48,21 +45,21 @@ const Gallery: React.FC = () => {
               <div className="overlay"></div>
             </SwiperSlide>
           ))}
-          <Button className="swiper-button-next underline-on-hover p-0">
+          <Button className="swiper-button-next underline-on-hover p-0 focus:ring-transparent ">
             Next
           </Button>
-          <Button className="swiper-button-prev underline-on-hover p-0">
+          <Button className="swiper-button-prev underline-on-hover p-0 focus:ring-transparent ">
             Prev
           </Button>
         </Swiper>
 
-        {/* <Swiper
+        <Swiper
           direction={"vertical"}
           slidesPerView={3}
           spaceBetween={24}
           wrapperTag="ul"
           modules={[Pagination]}
-          className="h-[609px] md:hidden "
+          className="h-[609px] md:!hidden "
         >
           {GALLERY_IMAGES.map(({ title, fileName }) => (
             <SwiperSlide key={title} tag="li" className="relative">
@@ -74,7 +71,7 @@ const Gallery: React.FC = () => {
               />
             </SwiperSlide>
           ))}
-        </Swiper> */}
+        </Swiper>
       </div>
     </section>
   );

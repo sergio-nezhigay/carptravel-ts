@@ -1,0 +1,32 @@
+{
+  "theme_color": "#626359",
+  "background_color": "#626359",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/",
+  "name": "CarpTravel",
+  "short_name": "CarpTravel",
+  "description": "We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!",
+  "icons": [
+    {
+      "src": "/meta/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/meta/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/meta/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/meta/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

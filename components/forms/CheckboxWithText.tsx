@@ -10,7 +10,7 @@ import {
 
 import { ICheckbox } from "@/types";
 
-function CheckboxWithText({ control, name, register, error }: ICheckbox) {
+function CheckboxWithText({ control, name, register }: ICheckbox) {
   return (
     <FormField
       control={control}

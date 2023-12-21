@@ -13,5 +13,5 @@ export interface ICheckbox {
   register: any;
   name: string;
   control: any;
-  error?: string | undefined;
+  // error?: string | undefined;
 }

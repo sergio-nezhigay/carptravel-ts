@@ -19,7 +19,7 @@ function Carrer() {
 
         <div className="md:flex md:gap-5 lg:gap-6">
           <div className="max-md:mr-auto md:w-[221.3px] lg:w-1/2">
-            <h4 className="mb-9 shrink-0 text-[30px] font-extralight uppercase leading-[36px] max-md:ml-[100px] md:mb-[56px] md:ml-auto md:text-right lg:mb-[45px] lg:ml-[147px] lg:text-left lg:text-[36px] lg:leading-[39px]">
+            <h4 className="mb-9 shrink-0 text-[30px] font-extralight uppercase leading-[36px] max-md:ml-[100px] md:mb-[56px] md:ml-auto md:text-right lg:mb-[45px] lg:ml-[123px] lg:text-left lg:text-[36px] lg:leading-[39px]">
               Why us ?
             </h4>
             <dl className="flex flex-col gap-4 text-right max-md:mr-[99px] md:gap-6">
