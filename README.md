@@ -4,20 +4,9 @@ Welcome to the Carptravel project! This is a web application built using Typescr
 
 ![site screenshot](./public/meta/opengraph-image.jpg)
 
-## Table of Contents 📜
-
-- [Demo](#demo)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Usage](#usage)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Demo 🚀
 
-Check out the live demo of the Carptravel project: [https://carptravel-rouge.vercel.app/](https://carptravel-rouge.vercel.app/) 🌐
+Check out the live demo of the Carptravel project: [https://carptravel-ts.vercel.app/](https://carptravel-ts.vercel.app/) 🌐
 
 ## Features ✨
 
@@ -35,7 +24,7 @@ To get started with the project locally on your machine, follow the instructions
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/sergio-nezhigay/n1.git
+   git clone https://github.com/sergio-nezhigay/carptravel-ts.git
    ```
 
 2. **Navigate to the project directory:**
@@ -72,10 +61,14 @@ Certainly! Here's the updated list without numbers:
 
 ## Technologies 🛠️
 
-- **[React](https://reactjs.org/)** - A JavaScript library for building user interfaces. ⚛️
-- **[Next.js](https://nextjs.org/)** - React framework for building server-rendered applications.
+-Certainly! Here's the updated list with the Shadcn Component Library link:
+
+## Technologies 🛠️
+
 - **[TypeScript](https://www.typescriptlang.org/)** - Adds static typing to JavaScript for enhanced development. 📝
-- **Shadcn/UI Component Library** - Leveraging the Shadcn library for reusable and aesthetically pleasing UI components. 🧰
+- **[React](https://reactjs.org/)** - A JavaScript library for building user interfaces. ⚛️
+- **[Next.js](https://nextjs.org/)** - React framework for building server-rendered applications. ⚛️
+- **[Shadcn Component Library](https://ui.shadcn.com/)** - Leveraging the Shadcn library for reusable and aesthetically pleasing UI components. 🧰
 - **[Tailwind CSS](https://tailwindcss.com/)** - A utility-first CSS framework for rapid UI development. 🎨
 - **[Swiper](https://swiperjs.com/)** - A modern mobile touch slider library. 📱
 - **[Zod](https://github.com/colinhacks/zod)** - A TypeScript-first schema declaration and validation library. 🚀
@@ -84,6 +77,8 @@ Certainly! Here's the updated list without numbers:
 - **[ESLint](https://eslint.org/)** - A pluggable and configurable linter tool for identifying and fixing problems in JavaScript code. 🧹
 - **[Vercel](https://vercel.com/)** - A platform for deploying web applications. 🚀
 - **[clsx](https://github.com/lukeed/clsx)** - A utility for conditionally joining class names together. 🧩
+
+This list now includes the link to the Shadcn Component Library for reference.
 
 This list provides a snapshot of various technologies used in web development, covering frameworks, libraries, tools, and more.
 
