@@ -2,13 +2,13 @@ import React from "react";
 
 function About() {
   return (
-    <section className="about section ">
+    <section id="about" className="about section ">
       <div className="container md:grid md:grid-cols-[auto,220px,243px] lg:grid-cols-[606px,292px,auto] lg:gap-6">
         <h1 className="title-thin max-md:mb-2 md:col-span-2 lg:col-span-1 lg:row-span-2 ">
           WHO
           <span className="font-medium"> WE ARE</span>
         </h1>
-        <div className="body-extralight w-[180px] max-md:mb-10 md:row-span-2 md:w-[221px] lg:w-[292px]">
+        <div className="body-extralight w-[180px] max-md:mb-10 md:row-span-2 md:w-[221.3px] lg:w-[292px]">
           <p className=" mb-5 md:mb-4 lg:mb-6">
             <span className="font-normal">a team of enthusiasts </span>who are
             fully committed to the mission of creating unforgettable and
@@ -24,7 +24,7 @@ function About() {
             enriching your spiritual world and creating unforgettable memories.
           </p>
         </div>
-        <div className="body-extralight w-[182px] leading-5 max-md:mb-10 max-md:ml-auto md:col-span-2 md:w-[221px] md:self-end lg:col-span-1 lg:col-start-3 lg:row-start-3 lg:w-[296px]">
+        <div className="body-extralight w-[182px] leading-5 max-md:mb-10 max-md:ml-auto md:col-span-2 md:w-[221.3px] md:self-end lg:col-span-1 lg:col-start-3 lg:row-start-3 lg:w-[296px]">
           <p className="font-normal uppercase">
             From vacationers
             <span className="ml-auto block w-fit"> to active travelers</span>

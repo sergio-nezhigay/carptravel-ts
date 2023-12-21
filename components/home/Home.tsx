@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { Link as ScrollLink } from "react-scroll";
 import React from "react";
 
 import Navbar from "./Navbar";
@@ -24,12 +26,15 @@ function Home() {
             Carpathians. Enjoy stunning views, exciting expeditions, and the
             best service!
           </p>
-          <Link
-            href="#"
+          <ScrollLink
+            href="#contacts"
+            to="contacts"
+            smooth={true}
+            duration={500}
             className="corners-border flex-center h-[52px] text-[18px] font-bold md:col-start-2 md:row-start-3 lg:h-[73px] lg:text-[32px]"
           >
             JOIN NOW
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </section>

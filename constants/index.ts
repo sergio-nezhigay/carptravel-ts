@@ -71,7 +71,7 @@ export const CARREER_ADVANTAGES = [
   },
 ];
 
-export const galleryImages = [
+export const GALLERY_IMAGES = [
   {
     title: "Mountines",
     fileName: "gallery1.jpg",
@@ -97,3 +97,17 @@ export const galleryImages = [
     fileName: "gallery3.jpg",
   },
 ];
+
+export const CONTACT_DATA = {
+  phoneNumbers: [
+    { number: "+38 (098) 12 34 567", label: "Mobile" },
+    { number: "+38 (073) 12 34 567", label: "Office" },
+  ],
+  emailAddress: "support@carptravel.com",
+  socialMediaLinks: [
+    { href: "https://www.facebook.com/", label: "Facebook" },
+    { href: "https://www.instagram.com/", label: "Instagram" },
+    { href: "https://www.youtube.com/", label: "YouTube" },
+    { href: "https://www.tiktok.com/", label: "TikTok" },
+  ],
+};

@@ -3,7 +3,7 @@ export interface FieldProps {
   name: string;
   control: any;
   label: string;
-  isTextarea?: boolean;
+  isTextarea?: boolean | string;
   isTel?: boolean;
   placeholder?: string;
   error?: string | undefined;
@@ -13,4 +13,5 @@ export interface ICheckbox {
   register: any;
   name: string;
   control: any;
+  error?: string | undefined;
 }

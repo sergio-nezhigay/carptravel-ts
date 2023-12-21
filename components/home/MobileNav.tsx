@@ -1,16 +1,19 @@
 import React from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { MENU_ITEMS } from "@/constants";
 import {
+  NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuLink,
-} from "@radix-ui/react-navigation-menu";
+} from "../ui/navigation-menu";
+import { Link as ScrollLink } from "react-scroll";
 
 function MobileNav() {
   return (
@@ -27,12 +30,17 @@ function MobileNav() {
         <NavigationMenuList className="flex flex-col gap-12">
           {MENU_ITEMS.map((menuItem) => (
             <NavigationMenuItem key={menuItem}>
-              <NavigationMenuLink
-                href={`/${menuItem}`}
-                className="underline-on-hover text-[18px] capitalize leading-[22px] tracking-widest text-white"
-              >
-                {menuItem}
-              </NavigationMenuLink>
+              <SheetClose asChild>
+                <ScrollLink
+                  href={`#${menuItem}`}
+                  to={`${menuItem}`}
+                  smooth={true}
+                  duration={500}
+                  className="underline-on-hover text-[18px] capitalize leading-[22px] tracking-widest text-white"
+                >
+                  {menuItem}
+                </ScrollLink>
+              </SheetClose>
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>

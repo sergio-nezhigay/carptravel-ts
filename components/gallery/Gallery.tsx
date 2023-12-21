@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import SwiperCore, { Pagination, Navigation } from "swiper/modules";
-import { galleryImages } from "@/constants";
+import { GALLERY_IMAGES } from "@/constants";
 import "swiper/css";
 // import "swiper/css/pagination";
 // import "swiper/css/scrollbar";
@@ -18,7 +18,7 @@ import { Button } from "../ui/button";
 
 const Gallery: React.FC = () => {
   return (
-    <section className="section gallery">
+    <section id="gallery" className="section gallery">
       <div className="container lg:px-0 ">
         <h2 className="title-thin shrink-0 max-md:mb-6 md:mb-[72px] md:text-center lg:mb-6 lg:ml-[23px] lg:text-left ">
           Our <span className="font-medium">Gallery</span>
@@ -37,7 +37,7 @@ const Gallery: React.FC = () => {
           modules={[Pagination, Navigation]}
           className="horizontal h-[294px] w-full max-md:hidden lg:h-[429px]"
         >
-          {galleryImages.map(({ title, fileName }) => (
+          {GALLERY_IMAGES.map(({ title, fileName }) => (
             <SwiperSlide key={title} tag="li" className="relative">
               <Image
                 src={`/images/${fileName}`}
@@ -64,7 +64,7 @@ const Gallery: React.FC = () => {
           modules={[Pagination]}
           className="h-[609px] md:hidden "
         >
-          {galleryImages.map(({ title, fileName }) => (
+          {GALLERY_IMAGES.map(({ title, fileName }) => (
             <SwiperSlide key={title} tag="li" className="relative">
               <Image
                 src={`/images/${fileName}`}

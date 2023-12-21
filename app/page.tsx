@@ -8,11 +8,11 @@ import Contacts from "@/components/Contacts";
 export default function Page() {
   return (
     <>
-      {/* <Home />
+      <Home />
       <About />
       <Services />
       <Carrer />
-      <Gallery /> */}
+      <Gallery />
       <Contacts />
     </>
   );

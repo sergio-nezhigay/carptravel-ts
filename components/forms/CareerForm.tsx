@@ -6,34 +6,54 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
-import formSchema from "./schema";
 import { Form } from "@/components/ui/form";
+import { careerFormSchema } from "./schema";
 import { Button } from "../ui/button";
 import Field from "./Field";
 import CheckboxWithText from "./CheckboxWithText";
+import SuccessMessage from "./SuccessMessage";
 
 function CareerForm() {
   const [successMessage, setSuccessMessage] = React.useState<string | null>(
     null
   );
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const initialFormData = {
+    username: "",
+    email: "",
+    phone: "",
+    position: "",
+    message: "",
+    consent: false,
+  };
+
+  const form = useForm<z.infer<typeof careerFormSchema>>({
+    resolver: zodResolver(careerFormSchema),
+    defaultValues: async () => {
+      if (localStorage.getItem("careerForm")) {
+        const storedValues = JSON.parse(
+          localStorage.getItem("careerForm") || "{}"
+        );
+        return storedValues;
+      }
+      return initialFormData;
+    },
   });
 
   const { formState, watch, setValue, register, handleSubmit, control } = form;
-  useFormPersist("carrerForm", {
+  useFormPersist("careerForm", {
     watch,
     setValue,
+    storage: window.localStorage,
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof careerFormSchema>) {
     console.log("Form values are:", values);
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    form.reset(initialFormData);
     setSuccessMessage("Your message has been successfully sent!");
     await new Promise((resolve) => setTimeout(resolve, 3000));
     setSuccessMessage("");
-    form.reset();
   }
 
   return (
@@ -46,9 +66,9 @@ function CareerForm() {
         and join our team!
       </p>
       <Form {...form}>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="relative">
           <div className="items-stretch md:flex md:h-fit md:gap-5 lg:gap-6">
-            <div className="md:w-1/2">
+            <div className="md:w-[221.3px] lg:w-[290px]">
               <Field
                 register={register}
                 control={control}
@@ -61,7 +81,7 @@ function CareerForm() {
                 register={register}
                 control={control}
                 name="email"
-                placeholder="johnrosie@gmail.com"
+                placeholder="johnsmith@email.com"
                 label="E - mail"
                 error={formState.errors.email?.message}
               />
@@ -92,20 +112,21 @@ function CareerForm() {
               isTextarea
             />
           </div>
-          <div className="md:flex md:items-start">
+          <div className="relative md:flex md:items-start">
             <CheckboxWithText
-              name="isConfirmed"
+              name="consent"
               control={control}
               register={register}
             />
-            {successMessage && <h2 className=" mb-5">{successMessage}</h2>}
             <Button
               type="submit"
-              className="ml-auto block p-0 text-[30px] font-medium uppercase leading-9 max-md:mt-4 md:mt-[-8px]"
+              className="underline-on-hover ml-auto block p-0 text-[30px] font-medium uppercase leading-9 max-md:mt-4 md:mt-[-8px]"
+              disabled={formState.isSubmitting}
             >
-              Send
+              {formState.isSubmitting ? "Sending..." : "Send"}
             </Button>
           </div>
+          <SuccessMessage message={successMessage} />
         </form>
       </Form>
     </>

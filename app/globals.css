@@ -9,13 +9,14 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 17px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
+
   /* color: rgb(154, 137, 137); */
   background-color: rgba(2, 15, 8, 0.5);
 }
 
 .container {
-  outline: 1px dotted green;
+  /* outline: 1px dotted green; */
 }
 
 @layer utilities {

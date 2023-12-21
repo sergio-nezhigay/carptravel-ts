@@ -18,7 +18,7 @@ function Services() {
     }
   };
   return (
-    <section>
+    <section id="services">
       <h2 className="sr-only">Our Services</h2>
       <Swiper
         ref={swiperRef}
