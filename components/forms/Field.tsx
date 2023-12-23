@@ -52,7 +52,7 @@ const Field: React.FC<IField> = ({
               <textarea
                 placeholder={placeholder}
                 {...field}
-                // {...register(name)}
+                {...register(name)}
                 className={textareaStyles}
               />
             </FormControl>
@@ -60,8 +60,8 @@ const Field: React.FC<IField> = ({
           {type === "tel" && (
             <FormControl className=" h-full">
               <Input
-                // {...registerWithMask(name, "(099) 99 99 999")}
                 {...field}
+                {...registerWithMask(name, "(099) 99 99 999")}
                 placeholder={placeholder}
                 type="text"
                 className={`${commonInputStyles}  pl-[42px] lg:pl-[56px] `}
