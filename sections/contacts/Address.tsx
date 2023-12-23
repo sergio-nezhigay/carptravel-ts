@@ -20,12 +20,14 @@ const Address: React.FC = () => {
         ))}
       </ul>
       <p className=" body-small ">Phone number</p>
-      <Link
-        href={`mailto:${emailAddress}`}
-        className="underline-on-hover body-extralight text-right leading-6 focus:outline-white md:col-start-1"
-      >
-        {emailAddress}
-      </Link>
+      <p className="text-right">
+        <Link
+          href={`mailto:${emailAddress}`}
+          className="underline-on-hover body-extralight  leading-6 focus:outline-white md:col-start-1"
+        >
+          {emailAddress}
+        </Link>
+      </p>
 
       <p className="body-small md:col-start-2">E-mail</p>
       <p className="body-small text-right md:col-start-3 md:row-start-1 lg:col-start-2 lg:row-start-3 lg:text-left">
