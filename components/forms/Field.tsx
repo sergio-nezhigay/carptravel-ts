@@ -27,8 +27,8 @@ const Field: React.FC<IField> = ({
   const commonInputStyles = `${errorClass} h-6 lg:h-7 rounded-none border-none border-transparent bg-white/5 py-0 pr-2 font-extralight leading-6 transition placeholder:text-white/20 focus:outline-white/5 focus:ring-transparent lg:text-[20px] flex-center text-[13px] lg:text-[20px]`;
 
   const textareaStyles = `
-    h-[196px] w-full grow resize-none rounded-none bg-white/5 px-2 py-0 text-[13px] font-extralight leading-6 transition placeholder:text-white/20 focus:outline-white/5 focus:ring-transparent
-    md:h-[228px] md:w-full lg:h-full lg:min-h-[174px] lg:w-full
+    max-md:min-h-[195px] w-full grow resize-none rounded-none bg-white/5 px-2 py-0 text-[13px] font-extralight leading-6 transition placeholder:text-white/20 focus:outline-white/5 focus:ring-transparent
+     md:w-full lg:h-full lg:min-h-[174px] lg:w-full
   `;
 
   return (

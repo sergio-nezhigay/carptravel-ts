@@ -20,12 +20,12 @@ const CheckboxWithText: React.FC<ICheckbox> = ({ control, name, register }) => {
       render={({ field }) => (
         <>
           <FormItem className="flex flex-row items-start space-x-2 space-y-0 ">
-            <div className="flex-center border border-white p-[3px]">
-              <FormControl className="flex-center border border-white bg-red-300 p-1">
+            <div className="flex-center border border-white bg-black p-[3px]">
+              <FormControl className="flex-center border border-white p-1 focus:outline-white ">
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
-                  className="z-50 border border-black"
+                  className="border border-black"
                   {...register(name)}
                 />
               </FormControl>{" "}

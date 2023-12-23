@@ -20,7 +20,7 @@ const Contacts: React.FC = () => {
                 <li key={index} className="text-right">
                   <Link
                     href={`tel:${phone.number.replace(/\s/g, "")}`}
-                    className="body-extralight underline-on-hover leading-6"
+                    className="body-extralight underline-on-hover leading-6 focus:outline-white"
                   >
                     {phone.number}
                   </Link>
@@ -30,7 +30,7 @@ const Contacts: React.FC = () => {
             <p className=" body-small ">Phone number</p>
             <Link
               href={`mailto:${emailAddress}`}
-              className="underline-on-hover body-extralight text-right leading-6 md:col-start-1"
+              className="underline-on-hover body-extralight text-right leading-6 focus:outline-white md:col-start-1"
             >
               {emailAddress}
             </Link>
@@ -45,7 +45,7 @@ const Contacts: React.FC = () => {
                 <li key={index}>
                   <Link
                     href={socialMedia.href}
-                    className="body-extralight underline-on-hover lowercase leading-6"
+                    className="body-extralight underline-on-hover lowercase leading-6 focus:outline-white"
                   >
                     {socialMedia.label}
                   </Link>
