@@ -21,12 +21,9 @@ const MobileNav: React.FC = () => {
         aria-controls="mobilemenu"
         className="text-[14px] leading-[17px] tracking-widest text-white md:hidden"
       >
-        MENU
+        <span id="mobilemenu">MENU</span>
       </SheetTrigger>
-      <SheetContent
-        id="mobilemenu"
-        className="flex-center w-full border-none bg-[#010A05BF] px-5 py-[43px]"
-      >
+      <SheetContent className="flex-center w-full border-none bg-[#010A05BF] px-5 py-[43px]">
         <SheetHeader>
           <SheetTrigger className="absolute right-5 top-[43px] z-50 ml-auto text-[14px] leading-[17px] tracking-widest text-white">
             CLOSE

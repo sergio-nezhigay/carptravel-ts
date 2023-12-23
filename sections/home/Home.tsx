@@ -41,7 +41,7 @@ const Home: React.FC = () => {
               to="contacts"
               smooth={true}
               duration={500}
-              className="corners-border flex-center h-[52px] text-[18px] font-bold  lg:h-[71px] lg:text-[32px]"
+              className="corners-border flex-center h-[52px] text-[18px] font-bold  focus:outline-white lg:h-[71px] lg:text-[32px]"
             >
               {joinNowButton}
             </ScrollLink>
