@@ -44,3 +44,9 @@ export interface ISuccessMessage {
 export interface ICareerWrapper {
   children: ReactNode;
 }
+
+export interface IServicesList {
+  indexCurrent: number;
+  currentService: number;
+  goToSlide(index: number): any;
+}

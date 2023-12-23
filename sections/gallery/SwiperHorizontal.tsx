@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./styles.scss";
 
-function SwiperHorizontal() {
+const SwiperHorizontal: React.FC = () => {
   return (
     <Swiper
       direction={"horizontal"}
@@ -47,6 +47,6 @@ function SwiperHorizontal() {
       </Button>
     </Swiper>
   );
-}
+};
 
 export default SwiperHorizontal;
