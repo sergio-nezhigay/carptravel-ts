@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import ContactForm from "../../components/forms/ContactForm";
-import { CONTACT_DATA } from "@/constants";
+import { CONTACT_DATA } from "@/constants/contacts";
 
 const Contacts: React.FC = () => {
   const { phoneNumbers, emailAddress, socialMediaLinks } = CONTACT_DATA;
@@ -19,7 +19,7 @@ const Contacts: React.FC = () => {
               {phoneNumbers.map((phone, index) => (
                 <li key={index} className="text-right">
                   <Link
-                    href={`tel:${phone.number}`}
+                    href={`tel:${phone.number.replace(/\s/g, "")}`}
                     className="body-extralight underline-on-hover leading-6"
                   >
                     {phone.number}

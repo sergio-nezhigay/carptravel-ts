@@ -6,11 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
 import { Button } from "../../components/ui/button";
-import { GALLERY_IMAGES } from "@/constants";
+// import { GALLERY_IMAGES } from "@/constants";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "./styles.scss";
+import { GALLERY_IMAGES } from "@/constants/gallery";
+// import { GALLERY_IMAGES } from "@/constants";
 
 const Gallery: React.FC = () => {
   return (

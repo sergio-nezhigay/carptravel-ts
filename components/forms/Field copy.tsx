@@ -10,6 +10,8 @@ import {
   FormMessage,
   FormField,
 } from "../ui/form";
+import { type } from "os";
+import { register } from "react-scroll/modules/mixins/scroller";
 
 const Field: React.FC<IField> = ({
   register,
@@ -34,54 +36,55 @@ const Field: React.FC<IField> = ({
     <FormField
       control={control}
       name={name}
-      defaultValue={""}
       render={({ field }) => (
         <FormItem
           className={`relative mb-4 grow space-y-1 lg:mb-6 
           ${type === "textarea" && "flex grow flex-col"} `}
         >
           <FormLabel
+            // id={label.replace(/[^a-zA-Z]/g, "")}
             className={`${errorClass} ${
               type === "tel" && "phone-prefix"
             }  text-[12px] font-extralight leading-5 tracking-[0.20em] md:leading-6`}
           >
             {label}
           </FormLabel>
-          {type === "textarea" && (
-            <FormControl className=" h-full">
-              <textarea
-                placeholder={placeholder}
-                {...field}
-                // {...register(name)}
-                className={textareaStyles}
+          <FormControl
+            aria-describedby={label.replace(/[^a-zA-Z]/g, "")}
+            className=" h-full"
+          >
+            <>
+              {type === "textarea" && (
+                <textarea
+                  placeholder={placeholder}
+                  {...field}
+                  {...register(name)}
+                  className={textareaStyles}
+                />
+              )}
+              {type === "tel" && (
+                <Input
+                  {...registerWithMask(name, "(099) 99 99 999")}
+                  {...field}
+                  placeholder={placeholder}
+                  type="text"
+                  className={`${commonInputStyles}  pl-[42px] lg:pl-[56px] `}
+                />
+              )}
+              {type === "text" && (
+                <Input
+                  placeholder={placeholder}
+                  {...field}
+                  {...register(name)}
+                  type="text"
+                  className={`${commonInputStyles} pl-2 `}
+                />
+              )}
+              <FormMessage
+                className={`absolute bottom-[-20px] right-0 text-right text-[12px] font-extralight tracking-[0.20em] ${errorClass}`}
               />
-            </FormControl>
-          )}
-          {type === "tel" && (
-            <FormControl className=" h-full">
-              <Input
-                // {...registerWithMask(name, "(099) 99 99 999")}
-                {...field}
-                placeholder={placeholder}
-                type="text"
-                className={`${commonInputStyles}  pl-[42px] lg:pl-[56px] `}
-              />
-            </FormControl>
-          )}
-          {type === "text" && (
-            <FormControl className=" h-full">
-              <Input
-                placeholder={placeholder}
-                {...field}
-                {...register(name)}
-                type="text"
-                className={`${commonInputStyles} pl-2 `}
-              />
-            </FormControl>
-          )}
-          <FormMessage
-            className={`absolute bottom-[-20px] right-0 text-right text-[12px] font-extralight tracking-[0.20em] ${errorClass}`}
-          />
+            </>
+          </FormControl>
         </FormItem>
       )}
     />
