@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
-
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetClose,
@@ -17,8 +17,13 @@ import { MENU_ITEMS } from "@/constants/home";
 const MobileNav: React.FC = () => {
   return (
     <Sheet>
-      <SheetTrigger className="text-[14px] leading-[17px] tracking-widest text-white md:hidden">
-        MENU
+      <SheetTrigger asChild>
+        <Button
+          variant="outline"
+          className="text-[14px] leading-[17px] tracking-widest text-white md:hidden"
+        >
+          MENU
+        </Button>
       </SheetTrigger>
       <SheetContent className="flex-center w-full border-none bg-[#010A05BF] px-5 py-[43px]">
         <SheetHeader>
