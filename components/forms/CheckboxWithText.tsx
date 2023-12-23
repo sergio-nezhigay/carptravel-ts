@@ -7,6 +7,7 @@ import {
   FormControl,
   FormLabel,
   FormMessage,
+  FormDescription,
 } from "../ui/form";
 
 import { ICheckbox } from "@/types";
@@ -28,6 +29,9 @@ const CheckboxWithText: React.FC<ICheckbox> = ({ control, name, register }) => {
                 />
               </div>
             </FormControl>
+            <FormDescription className="sr-only">
+              Agree to the terms
+            </FormDescription>
             <div className="space-y-1 leading-none md:max-w-[192px]">
               <FormLabel className="text-[12px] font-extralight leading-[22px] ">
                 I confirm my consent to the processing of personal data.
