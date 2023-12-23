@@ -11,10 +11,9 @@
       height 800ms;
 
     &.swiper-slide-next {
-      opacity: 100%;
       width: 58%;
       height: 294px;
-      & .overlay {
+      &.overlay::after {
         opacity: 0;
       }
     }

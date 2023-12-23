@@ -26,21 +26,22 @@ body {
     @apply !right-auto !left-[37px] lg:!left-[231px];
   }
 
-  .overlay {
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    @apply hidden;
+  }
+
+  .overlay::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 100%;
+    opacity: 1;
     background: #020f08bf;
-    mix-blend-mode: multiply;
-    transition: opacity 400ms;
-  }
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    @apply hidden;
+    transition: opacity 800ms;
+    z-index: 50;
   }
 
   .horizontal {
