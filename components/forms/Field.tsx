@@ -9,6 +9,7 @@ import {
   FormControl,
   FormMessage,
   FormField,
+  FormDescription,
 } from "../ui/form";
 
 const Field: React.FC<IField> = ({
@@ -79,6 +80,7 @@ const Field: React.FC<IField> = ({
               />
             </FormControl>
           )}
+          <FormDescription className="sr-only">Enter {label}</FormDescription>
           <FormMessage
             className={`absolute bottom-[-20px] right-0 text-right text-[12px] font-extralight tracking-[0.20em] ${errorClass}`}
           />
