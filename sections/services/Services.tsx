@@ -76,7 +76,7 @@ const Services: React.FC = () => {
                                 isActive
                                   ? "square  pl-4 font-medium"
                                   : "text-white/50"
-                              } text-left text-[20px] font-extralight uppercase leading-[17px] md:text-[22px] md:leading-[18px] lg:text-[28px] lg:leading-6`}
+                              } text-left text-[20px] font-extralight uppercase leading-[17px] focus:outline-white md:text-[22px] md:leading-[18px] lg:text-[28px] lg:leading-6`}
                             >
                               {service.title}
                             </button>

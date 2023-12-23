@@ -12,7 +12,7 @@ const Checkbox = React.forwardRef<
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
-      "peer h-[14px] w-[14px] shrink-0 rounded-sm border border-transparent ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+      "peer h-4 w-4 shrink-0 rounded-sm border border-transparent ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
       className,
       // Add conditional styling for checked state
       props.checked ? "bg-white text-primary-foreground" : "bg-[#4c4c4c]"

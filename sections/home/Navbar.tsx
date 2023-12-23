@@ -16,13 +16,13 @@ import { MENU_ITEMS } from "@/constants/home";
 const Navbar: React.FC = () => {
   return (
     <NavigationMenu className="flex-between w-full max-w-full  ">
-      <Link href="/">
+      <Link href="/" className="focus:outline-white">
         <Image
           src="/images/logo.svg"
           priority
           width={0}
           height={0}
-          className="block h-[33px] w-[61px]"
+          className="block h-[33px] w-[61px] "
           alt="Logo"
         />
       </Link>

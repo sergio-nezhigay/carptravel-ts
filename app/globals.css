@@ -55,6 +55,14 @@ body {
     content: " ";
   }
 
+  .big-border {
+    @apply relative;
+  }
+  .big-border::before {
+    @apply absolute top-1/2 left-1/2 w-[20px] h-[20px] -translate-y-1/2 -translate-x-1/2  bg-white -z-50;
+    content: " ";
+  }
+
   .phone-prefix {
     @apply relative;
   }

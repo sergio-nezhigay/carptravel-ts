@@ -19,16 +19,16 @@ const CheckboxWithText: React.FC<ICheckbox> = ({ control, name, register }) => {
       name={name}
       render={({ field }) => (
         <>
-          <FormItem className="flex flex-row items-start space-x-2 space-y-0 border-blue-300 p-[3px] ">
-            <FormControl>
-              {/* <div className="flex-center border border-white p-[3px]"> */}
-              <Checkbox
-                checked={field.value}
-                onCheckedChange={field.onChange}
-                className="flex-center border border-red-300 p-[3px]"
-                // {...register(name)}
-              />
-              {/* </div> */}
+          <FormItem className="flex flex-row items-start space-x-2 space-y-0 ">
+            <FormControl className="flex-center border border-white bg-red-300 p-1">
+              <div className="flex-center border border-white p-[3px]">
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                  className="z-50 border border-black"
+                  {...register(name)}
+                />
+              </div>
             </FormControl>
             <FormLabel className="text-[12px] font-extralight leading-[22px] ">
               I confirm my consent to the processing of personal data.
