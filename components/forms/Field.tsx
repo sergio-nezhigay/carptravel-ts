@@ -40,7 +40,7 @@ const Field: React.FC<IField> = ({
           ${type === "textarea" && "flex grow flex-col"} `}
         >
           <FormLabel
-            id={label.replace(/[^a-zA-Z]/g, "")}
+            // id={label.replace(/[^a-zA-Z]/g, "")}
             className={`${errorClass} ${
               type === "tel" && "phone-prefix"
             }  text-[12px] font-extralight leading-5 tracking-[0.20em] md:leading-6`}
