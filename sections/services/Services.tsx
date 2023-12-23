@@ -4,13 +4,55 @@ import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { EffectFade, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { SERVICES_LIST } from "@/constants";
+
+// import { SERVICES_LIST } from "@/constants/services";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { Button } from "./ui/button";
+export const SERVICES_LIST = [
+  {
+    title: "ATVs Traveling",
+    description:
+      "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains.",
+    slogan: "Feel the adrenaline rush",
+    imageSmall: "/services-1.jpg",
+    imageBG: "/services-bg-1.jpg",
+  },
+  {
+    title: "Rock climbing",
+    description:
+      "Overcome the peaks of the Carpathians in a unique way - climbing. Make your own way to the heights and find inner peace in the embrace of the mighty rocks.",
+    slogan: "Destroy your limitations",
+    imageSmall: "/services-2.jpg",
+    imageBG: "/services-bg-2.jpg",
+  },
+  {
+    title: "Hot air ballooning",
+    description:
+      "Feel Zen over the mountain peaks! Hot air ballooning gives you incredible impressions and panoramas of the Carpathians that seem endless.",
+    slogan: "Get Inspired",
+    imageSmall: "/services-3.jpg",
+    imageBG: "/services-bg-3.jpg",
+  },
+  {
+    title: "Skydiving",
+    description:
+      "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird's eye view forever.",
+    slogan: "Overcome your fears",
+    imageSmall: "/services-4.jpg",
+    imageBG: "/services-bg-4.jpg",
+  },
+  {
+    title: "Rafting",
+    description:
+      "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains.",
+    slogan: "Trust the flow",
+    imageSmall: "/services-5.jpg",
+    imageBG: "/services-bg-5.jpg",
+  },
+];
 
-function Services() {
+const Services: React.FC = () => {
   const swiperRef = useRef() as any;
   const [currentService, setcurrentService] = useState(0);
 
@@ -21,7 +63,6 @@ function Services() {
     }
   };
 
-  console.log("🚀 ~ file: Services.tsx:22 ~ test:", currentService);
   return (
     <section id="services">
       <h2 className="sr-only">Our Services</h2>
@@ -30,10 +71,6 @@ function Services() {
         loop={true}
         effect="fade"
         speed={1000}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
         fadeEffect={{ crossFade: true }}
         modules={[Autoplay, EffectFade]}
       >
@@ -58,6 +95,7 @@ function Services() {
                       src={`/images${service.imageSmall}`}
                       alt={service.slogan}
                       fill
+                      sizes={"100vh"}
                       className="object-cover "
                     />
                   </div>
@@ -104,6 +142,7 @@ function Services() {
             <Image
               src={`/images${service.imageBG}`}
               fill
+              sizes={"100vh"}
               alt={service.title}
               className="z-[-50] object-cover "
             />
@@ -112,6 +151,6 @@ function Services() {
       </Swiper>
     </section>
   );
-}
+};
 
 export default Services;

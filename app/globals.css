@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("../styles/theme.css");
 @import url("../styles/sections-bg.css");
 
 body {
@@ -11,10 +10,6 @@ body {
   line-height: 17px;
   color: #ffffff;
   background-color: rgba(2, 15, 8, 0.5);
-}
-
-.container {
-  /* outline: 1px dotted green; */
 }
 
 @layer utilities {
@@ -52,38 +47,20 @@ body {
     width: 100%;
   }
 
-  .country-code {
-    position: relative;
-    display: block;
-  }
-
-  .country-code::before {
-    display: block;
-    content: "";
-    position: absolute;
-    z-index: 50;
-    width: 16px;
-    height: 16px;
-    left: 8px; /* Adjust the position as needed */
-    top: 50%; /* Adjust the position as needed */
-    transform: translateY(-50%);
-    pointer-events: none; /* Ensure that the pseudo-element does not interfere with user interactions */
-    color: #fff; /* Adjust the color as needed */
-  }
-
   .square {
-    position: relative;
+    @apply relative;
+  }
+  .square::before {
+    @apply absolute top-1/2 left-0 w-[6px] h-[6px] -translate-y-1/2 rotate-45 bg-white;
+    content: " ";
   }
 
-  .square::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 6px;
-    height: 6px;
-    transform: translateY(-50%) rotate(45deg);
-    background-color: white;
+  .phone-prefix {
+    @apply relative;
+  }
+  .phone-prefix::before {
+    @apply absolute font-extralight text-[13px] lg:text-[20px] leading-6 bottom-[-31px] md:bottom-[-33px] lg:bottom-[-35px]  left-2 text-white;
+    content: "+38";
   }
 
   .corners-border {
@@ -143,145 +120,28 @@ body {
     @apply flex justify-start items-center;
   }
 
-  .card-wrapper {
-    @apply bg-light-900 dark:dark-gradient shadow-light-100 dark:shadow-dark-100;
+  .no-focus {
+    @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+  }
+  .section {
+    @apply py-[54px] md:py-[64px] lg:py-[104px];
+  }
+  .body-small {
+    @apply text-[12px] font-extralight leading-5 lg:leading-6;
+  }
+  .body-extralight {
+    @apply text-[14px] font-extralight leading-5 md:text-[16px] lg:text-[18px] lg:leading-6;
   }
 
-  .btn {
-    @apply bg-light-800 dark:bg-dark-300 !important;
+  .body-label {
+    @apply text-[14px] font-normal leading-6 md:text-[16px] lg:text-[18px] lg:leading-6;
   }
 
-  .btn-secondary {
-    @apply bg-light-800 dark:bg-dark-400 !important;
+  .body-extralight-13 {
+    @apply text-[14px] font-extralight leading-5 md:text-[13px] lg:text-[18px] lg:leading-6;
   }
 
-  .btn-tertiary {
-    @apply bg-light-700 dark:bg-dark-300 !important;
+  .title-thin {
+    @apply text-[40px] md:text-[67px] font-thin md:leading-[81px] leading-[56px] lg:text-[98px] lg:leading-[118px] tracking-[-0.04em] uppercase;
   }
-
-  .markdown {
-    @apply max-w-full prose dark:prose-p:text-light-700 dark:prose-ol:text-light-700 dark:prose-ul:text-light-500 dark:prose-strong:text-white dark:prose-headings:text-white prose-headings:text-dark-400 prose-h1:text-dark-300 prose-h2:text-dark-300 prose-p:text-dark-500 prose-ul:text-dark-500 prose-ol:text-dark-500;
-  }
-
-  .primary-gradient {
-    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
-  }
-
-  .dark-gradient {
-    background: linear-gradient(
-      232deg,
-      rgba(23, 28, 35, 0.41) 0%,
-      rgba(19, 22, 28, 0.7) 100%
-    );
-  }
-
-  .tab {
-    @apply min-h-full dark:bg-dark-400 bg-light-800 text-light-500 dark:data-[state=active]:bg-dark-300 data-[state=active]:bg-primary-100 data-[state=active]:text-primary-500 !important;
-  }
-}
-
-.no-focus {
-  @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
-}
-
-.active-theme {
-  filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg)
-    brightness(104%) contrast(106%) !important;
-}
-
-.light-gradient {
-  background: linear-gradient(
-    132deg,
-    rgba(247, 249, 255, 0.5) 0%,
-    rgba(229, 237, 255, 0.25) 100%
-  );
-}
-
-.primary-text-gradient {
-  background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
-  border-radius: 2px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 50px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Markdown Start */
-.markdown a {
-  color: #1da1f2;
-}
-
-.markdown a,
-code {
-  /* These are technically the same, but use both */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  -ms-word-break: break-all;
-  /* This is the dangerous one in WebKit, as it breaks things wherever */
-  word-break: break-all;
-  /* Instead use this non-standard one: */
-  word-break: break-word;
-
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-
-  padding: 2px;
-  color: #ff7000 !important;
-}
-
-.markdown pre {
-  display: grid;
-  width: 100%;
-}
-
-.markdown pre code {
-  width: 100%;
-  display: block;
-  overflow-x: auto;
-
-  color: inherit !important;
-}
-/* Markdown End */
-
-/* Clerk */
-.cl-internal-b3fm6y {
-  background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%) !important;
-}
-
-.hash-span {
-  margin-top: -140px;
-  padding-bottom: 140px;
-  display: block;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }

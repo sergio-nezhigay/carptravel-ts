@@ -1,3 +1,4 @@
+import React from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 
 import {
@@ -10,7 +11,7 @@ import {
 
 import { ICheckbox } from "@/types";
 
-function CheckboxWithText({ control, name, register }: ICheckbox) {
+const CheckboxWithText: React.FC<ICheckbox> = ({ control, name, register }) => {
   return (
     <FormField
       control={control}
@@ -23,7 +24,7 @@ function CheckboxWithText({ control, name, register }: ICheckbox) {
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
-                  {...register(name)}
+                  // {...register(name)}
                 />
               </div>
             </FormControl>
@@ -40,6 +41,6 @@ function CheckboxWithText({ control, name, register }: ICheckbox) {
       )}
     />
   );
-}
+};
 
 export default CheckboxWithText;

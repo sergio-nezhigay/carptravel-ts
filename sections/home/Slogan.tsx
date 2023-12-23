@@ -1,6 +1,6 @@
 import React from "react";
 
-function Slogan() {
+const Slogan: React.FC = () => {
   return (
     <div className=" w-[118px] max-md:mb-6 max-md:ml-auto md:mb-[56px] md:h-[88px] md:w-[230px] lg:mb-[181px] lg:h-[123px] lg:w-[305px] ">
       <p className="flex text-[37px] leading-[37px]  md:text-[67px] md:leading-[67px] lg:text-[98px] lg:leading-[98px]">
@@ -14,6 +14,6 @@ function Slogan() {
       </p>
     </div>
   );
-}
+};
 
 export default Slogan;

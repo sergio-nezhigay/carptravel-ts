@@ -11,6 +11,7 @@ import { Form } from "@/components/ui/form";
 import SubmitButton from "./SubmitButton";
 import Field from "./Field";
 import SuccessMessage from "./SuccessMessage";
+import { CONTACT_FORM_CONFIG } from "@/constants/contacts";
 
 const ContactForm: React.FC = () => {
   const [successMessage, setSuccessMessage] = React.useState<string | null>(
@@ -35,45 +36,40 @@ const ContactForm: React.FC = () => {
     await new Promise((resolve) => setTimeout(resolve, 3000));
     setSuccessMessage("");
   }
+
   return (
     <div className="lg:w-1/2">
       <Form {...form}>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="lg:flex lg:h-full lg:flex-col"
+          className="relative lg:flex lg:h-full lg:flex-col"
         >
           <div className="h-full grow md:flex md:h-fit md:gap-5 lg:flex-col lg:gap-4">
             <div className=" md:w-[221.3px] lg:flex  lg:w-full lg:gap-5 ">
-              <Field
-                register={register}
-                control={control}
-                name="username"
-                placeholder="John Smith"
-                label="Full name"
-                error={formState.errors.username?.message}
-              />
-              <Field
-                register={register}
-                control={control}
-                name="email"
-                placeholder="johnsmith@email.com"
-                label="E - mail"
-                error={formState.errors.email?.message}
-              />
+              {CONTACT_FORM_CONFIG.inputs.map((field) => (
+                <Field
+                  key={field.name}
+                  register={register}
+                  control={control}
+                  name={field.name}
+                  placeholder={field.placeholder}
+                  type={field.type}
+                  label={field.label}
+                  error={formState.errors}
+                />
+              ))}
             </div>
             <Field
               register={register}
               control={control}
-              name="message"
-              label="Message"
-              error={formState.errors.message?.message}
-              isTextarea
+              name={CONTACT_FORM_CONFIG.message.name}
+              type={CONTACT_FORM_CONFIG.message.type}
+              label={CONTACT_FORM_CONFIG.message.label}
+              error={formState.errors}
             />
           </div>
-          <div className="md:flex md:items-start">
-            <SuccessMessage message={successMessage} />
-            <SubmitButton isSubmitting={formState.isSubmitting} />
-          </div>
+          <SubmitButton isSubmitting={formState.isSubmitting} />
+          <SuccessMessage message={successMessage} />
         </form>
       </Form>
     </div>

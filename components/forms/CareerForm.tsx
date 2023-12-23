@@ -13,32 +13,15 @@ import Field from "./Field";
 import CheckboxWithText from "./CheckboxWithText";
 import SuccessMessage from "./SuccessMessage";
 import SubmitButton from "./SubmitButton";
+import { FORM_CONFIG, INITIAL_CAREER_FORM_DATA } from "@/constants/career";
 
-function CareerForm() {
+const CareerForm: React.FC = () => {
   const [successMessage, setSuccessMessage] = React.useState<string | null>(
     null
   );
 
-  const initialFormData = {
-    username: "",
-    email: "",
-    phone: "",
-    position: "",
-    message: "",
-    consent: false,
-  };
-
   const form = useForm<z.infer<typeof careerFormSchema>>({
     resolver: zodResolver(careerFormSchema),
-    defaultValues: async () => {
-      if (localStorage.getItem("careerForm")) {
-        const storedValues = JSON.parse(
-          localStorage.getItem("careerForm") || "{}"
-        );
-        return storedValues;
-      }
-      return initialFormData;
-    },
   });
 
   const { formState, watch, setValue, register, handleSubmit, control } = form;
@@ -50,7 +33,7 @@ function CareerForm() {
   async function onSubmit(values: z.infer<typeof careerFormSchema>) {
     console.log("Form values are:", values);
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    form.reset(initialFormData);
+    form.reset(INITIAL_CAREER_FORM_DATA);
     setSuccessMessage("Your message has been successfully sent!");
     await new Promise((resolve) => setTimeout(resolve, 3000));
     setSuccessMessage("");
@@ -69,47 +52,26 @@ function CareerForm() {
         <form onSubmit={handleSubmit(onSubmit)} className="relative">
           <div className="items-stretch md:flex md:h-fit md:gap-5 lg:gap-6">
             <div className="md:w-[221.3px] lg:w-[290px]">
-              <Field
-                register={register}
-                control={control}
-                name="username"
-                placeholder="John Smith"
-                label="Full name"
-                error={formState.errors.username?.message}
-              />
-              <Field
-                register={register}
-                control={control}
-                name="email"
-                placeholder="johnsmith@email.com"
-                label="E - mail"
-                error={formState.errors.email?.message}
-              />
-              <Field
-                register={register}
-                control={control}
-                name="position"
-                placeholder="Movie maker"
-                label="Position"
-                error={formState.errors.position?.message}
-              />
-              <Field
-                register={register}
-                control={control}
-                isTel
-                name="phone"
-                placeholder="(097) 12 34 567"
-                label="Phone"
-                error={formState.errors.phone?.message}
-              />
+              {FORM_CONFIG.inputs.map((field) => (
+                <Field
+                  key={field.name}
+                  register={register}
+                  control={control}
+                  name={field.name}
+                  placeholder={field.placeholder}
+                  type={field.type}
+                  label={field.label}
+                  error={formState.errors}
+                />
+              ))}
             </div>
             <Field
               register={register}
               control={control}
-              name="message"
-              label="Message"
+              name={FORM_CONFIG.message.name}
+              type={FORM_CONFIG.message.type}
+              label={FORM_CONFIG.message.label}
               error={formState.errors.message?.message}
-              isTextarea
             />
           </div>
           <div className="relative md:flex md:items-start">
@@ -125,6 +87,6 @@ function CareerForm() {
       </Form>
     </>
   );
-}
+};
 
 export default CareerForm;

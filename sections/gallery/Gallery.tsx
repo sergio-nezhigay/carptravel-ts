@@ -1,17 +1,16 @@
 "use client";
+
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import { Pagination, Navigation } from "swiper/modules";
-import { GALLERY_IMAGES } from "@/constants";
-import "swiper/css";
-
-import "swiper/css/navigation";
-
-import "./styles.scss";
-
 import Image from "next/image";
-import { Button } from "../ui/button";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+
+import { Button } from "../../components/ui/button";
+import { GALLERY_IMAGES } from "@/constants";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "./styles.scss";
 
 const Gallery: React.FC = () => {
   return (
@@ -40,6 +39,7 @@ const Gallery: React.FC = () => {
                 src={`/images/${fileName}`}
                 alt={title}
                 fill
+                sizes={"100vh"}
                 className=" object-cover"
               />
               <div className="overlay"></div>
@@ -67,6 +67,7 @@ const Gallery: React.FC = () => {
                 src={`/images/${fileName}`}
                 alt={title}
                 fill
+                sizes={"100vh"}
                 className=" object-cover"
               />
             </SwiperSlide>

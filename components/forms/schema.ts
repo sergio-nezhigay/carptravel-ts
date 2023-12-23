@@ -4,13 +4,18 @@ export const careerFormSchema = z.object({
   username: z.string().min(2, {
     message: "✕ Incorrect name",
   }),
-  email: z.string(),
+  email: z.string().email({
+    message: "✕ Incorrect Email",
+  }),
   phone: z.string(),
   position: z.string(),
   message: z.string(),
-  consent: z.boolean().refine((value) => value === true, {
-    message: "You must consent to send this message",
-  }),
+  consent: z
+    .boolean()
+    .refine((value) => value === true, {
+      message: "You must consent to send this message",
+    })
+    .default(false),
 });
 
 export const contactFormSchema = z.object({

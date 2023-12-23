@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import ContactForm from "./forms/ContactForm";
+
+import ContactForm from "../../components/forms/ContactForm";
 import { CONTACT_DATA } from "@/constants";
 
 const Contacts: React.FC = () => {

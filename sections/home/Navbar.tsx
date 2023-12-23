@@ -1,19 +1,19 @@
 "use client";
 
 import React from "react";
-import { MENU_ITEMS } from "@/constants";
+import Image from "next/image";
+import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
+
 import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
-  NavigationMenuLink,
-} from "../ui/navigation-menu";
-import Image from "next/image";
-import Link from "next/link";
-import { Link as ScrollLink } from "react-scroll";
+} from "../../components/ui/navigation-menu";
 import MobileNav from "./MobileNav";
+import { MENU_ITEMS } from "@/constants/home";
 
-function Navbar() {
+const Navbar: React.FC = () => {
   return (
     <NavigationMenu className="flex-between w-full max-w-full  ">
       <Link href="/">
@@ -29,24 +29,21 @@ function Navbar() {
       <NavigationMenuList className="hidden gap-6 md:flex lg:gap-[56px] ">
         {MENU_ITEMS.map((menuItem) => (
           <NavigationMenuItem key={menuItem}>
-            {/* <NavigationMenuLink asChild> */}
             <ScrollLink
               href={`#${menuItem}`}
               to={`${menuItem}`}
               smooth={true}
               duration={500}
-              // scroll={false}
               className="underline-on-hover text-[14px] capitalize leading-[17px] tracking-widest text-white"
             >
               {menuItem}
             </ScrollLink>
-            {/* </NavigationMenuLink> */}
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>
       <MobileNav />
     </NavigationMenu>
   );
-}
+};
 
 export default Navbar;

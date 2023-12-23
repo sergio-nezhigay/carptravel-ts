@@ -1,11 +1,8 @@
 import React from "react";
 import { Button } from "../ui/button";
+import { ISubmitButton } from "@/types";
 
-interface SubmitButtonProps {
-  isSubmitting: boolean;
-}
-
-const SubmitButton: React.FC<SubmitButtonProps> = ({ isSubmitting }) => {
+const SubmitButton: React.FC<ISubmitButton> = ({ isSubmitting }) => {
   return (
     <Button
       type="submit"

@@ -1,11 +1,13 @@
-import About from "@/components/About";
-import Gallery from "@/components/gallery/Gallery";
-import Services from "@/components/Services";
-import Carrer from "@/components/career/Career";
-import Home from "@/components/home/Home";
-import Contacts from "@/components/Contacts";
+import React from "react";
 
-export default function Page() {
+import About from "@/sections/about/About";
+import Gallery from "@/sections/gallery/Gallery";
+import Services from "@/sections/services/Services";
+import Carrer from "@/sections/career/Career";
+import Home from "@/sections/home/Home";
+import Contacts from "@/sections/contacts/Contacts";
+
+const Page: React.FC = () => {
   return (
     <>
       <Home />
@@ -16,4 +18,6 @@ export default function Page() {
       <Contacts />
     </>
   );
-}
+};
+
+export default Page;

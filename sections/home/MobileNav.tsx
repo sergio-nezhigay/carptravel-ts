@@ -1,4 +1,6 @@
 import React from "react";
+import { Link as ScrollLink } from "react-scroll";
+
 import {
   Sheet,
   SheetClose,
@@ -6,16 +8,13 @@ import {
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { MENU_ITEMS } from "@/constants";
 import {
-  NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
-  NavigationMenuLink,
-} from "../ui/navigation-menu";
-import { Link as ScrollLink } from "react-scroll";
+} from "../../components/ui/navigation-menu";
+import { MENU_ITEMS } from "@/constants/home";
 
-function MobileNav() {
+const MobileNav: React.FC = () => {
   return (
     <Sheet>
       <SheetTrigger className="text-[14px] leading-[17px] tracking-widest text-white md:hidden">
@@ -47,6 +46,6 @@ function MobileNav() {
       </SheetContent>
     </Sheet>
   );
-}
+};
 
 export default MobileNav;
