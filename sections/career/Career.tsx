@@ -2,16 +2,18 @@ import React from "react";
 import CareerForm from "../../components/forms/CareerForm";
 import CareerWrapper from "./CareerWrapper";
 import { CAREER_DATA } from "@/constants/career";
+import Title from "@/components/Title";
 
 const Career: React.FC = () => {
   return (
     <section id={CAREER_DATA.sectionId}>
       <CareerWrapper>
         <div className="mb-9 md:mb-[5px] md:flex md:justify-between lg:mb-6 ">
-          <h2 className="title-thin shrink-0 max-md:mb-6  ">
-            {CAREER_DATA.chooseUsTitle}
-            <span className="font-medium">{CAREER_DATA.usTitleSuffix}</span>
-          </h2>
+          <Title
+            prefix={CAREER_DATA.titlePrefix}
+            suffix={CAREER_DATA.titleSuffix}
+            styles="max-md:mb-6"
+          />
           <p className="body-extralight-13 max-md:ml-[100px] md:mt-[6px] md:w-[221.3px] md:text-justify lg:w-[293px]">
             {CAREER_DATA.description}
           </p>

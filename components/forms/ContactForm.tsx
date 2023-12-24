@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="relative lg:flex lg:h-full lg:flex-col"
         >
-          <div className="h-full grow md:flex md:h-[265px] md:gap-5 lg:flex-col lg:gap-4">
+          <div className="h-full grow md:flex md:h-[265px] md:gap-5 lg:h-auto lg:flex-col lg:gap-4">
             <div className=" md:w-[221.3px] lg:flex  lg:w-full lg:gap-5 ">
               {CONTACT_FORM_CONFIG.inputs.map((field) => (
                 <Field

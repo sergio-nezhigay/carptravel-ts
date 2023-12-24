@@ -1,15 +1,17 @@
 import React from "react";
 
 import { ABOUT_DATA } from "@/constants/about";
+import Title from "@/components/Title";
 
 const About: React.FC = () => {
   return (
     <section id="about" className="about section ">
       <div className="container md:grid md:grid-cols-[auto,220px,243px] lg:grid-cols-[606px,292px,auto] lg:gap-6">
-        <h1 className="title-thin max-md:mb-2 md:col-span-2 lg:col-span-1 lg:row-span-2 ">
-          {ABOUT_DATA.whoTitle}
-          <span className="font-medium">{ABOUT_DATA.weAreTitle}</span>
-        </h1>
+        <Title
+          prefix={ABOUT_DATA.titlePrefix}
+          suffix={ABOUT_DATA.titleSuffix}
+          styles="max-md:mb-2 md:col-span-2 lg:col-span-1 lg:row-span-2 "
+        />
         <div className="body-extralight w-[180px] max-md:mb-10 md:row-span-2 md:w-[221.3px] lg:w-[292px]">
           <p className=" mb-5 md:mb-4 lg:mb-6">
             <span className="font-normal">{ABOUT_DATA.subtitlePrefix}</span>

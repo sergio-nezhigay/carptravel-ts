@@ -1,6 +1,6 @@
 export const ABOUT_DATA = {
-  whoTitle: "WHO",
-  weAreTitle: "WE ARE",
+  titlePrefix: "WHO",
+  titleSuffix: "WE ARE",
   subtitlePrefix: "a team of enthusiasts",
 
   firstParagraph: `

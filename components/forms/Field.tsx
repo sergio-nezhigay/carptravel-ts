@@ -24,12 +24,15 @@ const Field: React.FC<IField> = ({
   const registerWithMask = useHookFormMask(register);
 
   const errorClass = error && error[name] && "text-[#FF5757]";
-  const commonInputStyles = `${errorClass} h-6 lg:h-7 rounded-none border-none border-transparent bg-white/5 py-0 pr-2 font-extralight leading-6 transition placeholder:text-white/20 focus:outline-white/5 focus:ring-transparent lg:text-[20px] flex-center text-[13px] lg:text-[20px]`;
+  const commonStyles = `
+  rounded-none bg-white/5 hover:bg-white/10 transition py-0 text-[13px] font-extralight leading-6 transition placeholder:text-white/20 focus:outline-white/5 focus:ring-transparent
+`;
+
+  const inputStyles = `${errorClass} ${commonStyles} h-6 lg:h-7 border-none border-transparent bg-white/5 lg:text-[20px] flex-center pr-2`;
 
   const textareaStyles = `
-    max-md:min-h-[195px] w-full grow resize-none rounded-none bg-white/5 px-2 py-0 text-[13px] font-extralight leading-6 transition placeholder:text-white/20 focus:outline-white/5 focus:ring-transparent
-     md:w-full lg:h-full lg:min-h-[174px] lg:w-full
-  `;
+  max-md:min-h-[195px] w-full grow resize-none ${commonStyles} px-2 lg:h-full lg:min-h-[174px] lg:w-full
+`;
 
   return (
     <FormField
@@ -65,7 +68,7 @@ const Field: React.FC<IField> = ({
                 {...registerWithMask(name, "(099) 99 99 999")}
                 placeholder={placeholder}
                 type="text"
-                className={`${commonInputStyles}  pl-[42px] lg:pl-[56px] `}
+                className={`${inputStyles}  pl-[42px] lg:pl-[56px] `}
               />
             </FormControl>
           )}
@@ -76,7 +79,7 @@ const Field: React.FC<IField> = ({
                 {...field}
                 {...register(name)}
                 type="text"
-                className={`${commonInputStyles} pl-2 `}
+                className={`${inputStyles} pl-2 `}
               />
             </FormControl>
           )}

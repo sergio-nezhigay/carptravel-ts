@@ -15,7 +15,6 @@ import "./styles.scss";
 const SwiperHorizontal: React.FC = () => {
   return (
     <Swiper
-      direction={"horizontal"}
       slidesPerView={"auto"}
       navigation={{
         nextEl: ".swiper-button-next",

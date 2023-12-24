@@ -24,8 +24,8 @@ const CARREER_ADVANTAGES = [
 
 const careerConstants = {
   sectionId: "career",
-  chooseUsTitle: "Choose",
-  usTitleSuffix: "us",
+  titlePrefix: "Choose",
+  titleSuffix: "us",
   description: `
         Your chance to join our passionate team in Carpathian tourism.
         Seeking talented professionals to share our common mission.
