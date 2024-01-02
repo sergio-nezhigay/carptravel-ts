@@ -74,7 +74,7 @@ Certainly! Here's the updated list without numbers:
 - **[Zod](https://github.com/colinhacks/zod)** - A TypeScript-first schema declaration and validation library. 🚀
 - **[React Hook Form](https://react-hook-form.com/)** - A library for managing forms in React using hooks. 📝
 - **[Prettier](https://prettier.io/)** - An opinionated code formatter for JavaScript, TypeScript, and more. ✨
-- **[ESLint](https://eslint.org/)** - A pluggable and configurable linter tool for identifying and fixing problems in JavaScript code. 🧹
+- **[ESLint](https://eslint.org/)** - A pluggable and configurable linter tool for identifying and fixing problems in JavaScript code 🧹
 - **[Vercel](https://vercel.com/)** - A platform for deploying web applications. 🚀
 - **[clsx](https://github.com/lukeed/clsx)** - A utility for conditionally joining class names together. 🧩
 
