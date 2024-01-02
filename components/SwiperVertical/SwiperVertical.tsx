@@ -9,7 +9,7 @@ import { GALLERY_IMAGES } from "@/constants/gallery";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const SwiperVertical: React.FC = () => {
+export const SwiperVertical: React.FC = () => {
   return (
     <Swiper
       direction={"vertical"}
@@ -32,5 +32,3 @@ const SwiperVertical: React.FC = () => {
     </Swiper>
   );
 };
-
-export default SwiperVertical;

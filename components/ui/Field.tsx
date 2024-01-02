@@ -1,7 +1,7 @@
 import React from "react";
 import { useHookFormMask } from "use-mask-input";
 
-import { Input } from "../ui/input";
+import { Input } from "./input";
 import {
   FormItem,
   FormLabel,
@@ -9,7 +9,7 @@ import {
   FormMessage,
   FormField,
   FormDescription,
-} from "../ui/form";
+} from "./form";
 
 import { IField } from "@/types";
 

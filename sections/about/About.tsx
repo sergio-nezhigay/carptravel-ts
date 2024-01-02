@@ -1,10 +1,10 @@
 import React from "react";
 
-import Title from "@/components/Title";
+import { Title } from "@/components/Title";
 
 import { ABOUT_DATA } from "@/constants/about";
 
-const About: React.FC = () => {
+export const About: React.FC = () => {
   const {
     sectionId,
     titlePrefix,
@@ -48,5 +48,3 @@ const About: React.FC = () => {
     </section>
   );
 };
-
-export default About;

@@ -13,7 +13,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "@/styles/swiper.scss";
 
-const SwiperHorizontal: React.FC = () => {
+export const SwiperHorizontal: React.FC = () => {
   return (
     <Swiper
       slidesPerView={"auto"}
@@ -48,5 +48,3 @@ const SwiperHorizontal: React.FC = () => {
     </Swiper>
   );
 };
-
-export default SwiperHorizontal;

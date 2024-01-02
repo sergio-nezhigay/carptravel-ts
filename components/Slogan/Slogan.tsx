@@ -2,7 +2,7 @@ import React from "react";
 
 import { HOME } from "@/constants/home";
 
-const Slogan: React.FC = () => {
+export const Slogan: React.FC = () => {
   const { part1, part2, part3 } = HOME.slogan;
   return (
     <div className="w-[118px] uppercase max-md:mb-6 max-md:ml-auto md:mb-[56px] md:h-[88px] md:w-[230px] lg:mb-[181px] lg:h-[123px] lg:w-[305px]">
@@ -18,5 +18,3 @@ const Slogan: React.FC = () => {
     </div>
   );
 };
-
-export default Slogan;

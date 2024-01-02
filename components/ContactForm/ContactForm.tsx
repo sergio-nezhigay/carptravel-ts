@@ -7,15 +7,15 @@ import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
 import { Form } from "@/components/ui/form";
-import SubmitButton from "./SubmitButton";
-import Field from "./Field";
-import SuccessMessage from "./SuccessMessage";
+import SubmitButton from "@/components/ui/SubmitButton";
+import Field from "@/components/ui/Field";
+import SuccessMessage from "@/components/ui/SuccessMessage";
 
-import { contactFormSchema } from "./schema";
+import { contactFormSchema } from "@/lib/schema";
 
 import { CONTACT_FORM_CONFIG } from "@/constants/contacts";
 
-const ContactForm: React.FC = () => {
+export const ContactForm: React.FC = () => {
   const [successMessage, setSuccessMessage] = React.useState<string | null>(
     null
   );
@@ -80,5 +80,3 @@ const ContactForm: React.FC = () => {
     </div>
   );
 };
-
-export default ContactForm;

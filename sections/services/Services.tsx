@@ -5,15 +5,15 @@ import Image from "next/image";
 import { EffectFade, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import ServicesList from "../../components/ServicesList";
-import Title from "@/components/Title";
+import { ServicesList } from "@/components/ServicesList";
+import { Title } from "@/components/Title";
 
 import { SERVICES_LIST, SERVICES } from "@/constants/services";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-const Services: React.FC = () => {
+export const Services: React.FC = () => {
   const { sectionId, titlePrefix, titleSuffix } = SERVICES;
 
   const swiperRef = useRef() as any;
@@ -93,5 +93,3 @@ const Services: React.FC = () => {
     </section>
   );
 };
-
-export default Services;

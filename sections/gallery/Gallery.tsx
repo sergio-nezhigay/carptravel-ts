@@ -1,12 +1,12 @@
 import React from "react";
 
-import SwiperHorizontal from "@/components/SwiperHorizontal";
-import SwiperVertical from "@/components/SwiperVertical";
-import Title from "@/components/Title";
+import { SwiperHorizontal } from "@/components/SwiperHorizontal";
+import { SwiperVertical } from "@/components/SwiperVertical";
+import { Title } from "@/components/Title";
 
 import { GALLERY } from "@/constants/gallery";
 
-const Gallery: React.FC = () => {
+export const Gallery: React.FC = () => {
   const { sectionId, titlePrefix, titleSuffix } = GALLERY;
 
   return (
@@ -23,5 +23,3 @@ const Gallery: React.FC = () => {
     </section>
   );
 };
-
-export default Gallery;

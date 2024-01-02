@@ -5,16 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 
-import MobileNav from "./MobileNav";
+import { MobileNav } from "@/components/MobileNav";
 import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
-} from "./ui/navigation-menu";
+} from "@/components/ui/navigation-menu";
 
 import { MENU_ITEMS } from "@/constants/header";
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   return (
     <div className="absolute top-9 w-full md:top-6">
       <div className="container">
@@ -50,5 +50,3 @@ const Navbar: React.FC = () => {
     </div>
   );
 };
-
-export default Navbar;

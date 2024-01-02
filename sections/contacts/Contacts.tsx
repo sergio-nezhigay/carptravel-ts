@@ -1,12 +1,12 @@
 import React from "react";
 
-import ContactForm from "@/components/forms/ContactForm";
-import Title from "@/components/Title";
-import Address from "../../components/Address";
+import { Title } from "@/components/Title";
+import { Address } from "@/components/Address";
+import { ContactForm } from "@/components/ContactForm";
 
 import { CONTACT_DATA } from "@/constants/contacts";
 
-const Contacts: React.FC = () => {
+export const Contacts: React.FC = () => {
   const { titlePrefix, titleSuffix, sectionId } = CONTACT_DATA;
   return (
     <section id={sectionId} className="section contacts">
@@ -24,5 +24,3 @@ const Contacts: React.FC = () => {
     </section>
   );
 };
-
-export default Contacts;

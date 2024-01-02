@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { CONTACT_DATA } from "@/constants/contacts";
 
-const Address: React.FC = () => {
+export const Address: React.FC = () => {
   const { phoneNumbers, emailAddress, socialMediaLinks } = CONTACT_DATA;
   return (
     <address className="mb-3 grid grid-cols-[1fr,auto] gap-x-5 gap-y-6 not-italic md:mb-[64px] md:grid-cols-[221.3px,auto,auto,221.3px] lg:mb-0 lg:w-1/2 lg:grid-cols-[293px,auto] lg:grid-rows-[3fr,148px,auto] ">
@@ -51,5 +51,3 @@ const Address: React.FC = () => {
     </address>
   );
 };
-
-export default Address;

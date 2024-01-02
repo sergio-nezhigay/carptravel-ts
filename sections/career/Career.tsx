@@ -1,12 +1,12 @@
 import React from "react";
 
-import CareerForm from "@/components/forms/CareerForm";
-import CareerWrapper from "../../components/CareerWrapper";
-import Title from "@/components/Title";
+import { CareerForm } from "@/components/CareerForm";
+import { CareerWrapper } from "@/components/CareerWrapper";
+import { Title } from "@/components/Title";
 
 import { CAREER_DATA } from "@/constants/career";
 
-const Career: React.FC = () => {
+export const Career: React.FC = () => {
   const {
     sectionId,
     titlePrefix,
@@ -60,5 +60,3 @@ const Career: React.FC = () => {
     </section>
   );
 };
-
-export default Career;

@@ -8,11 +8,11 @@ import {
   FormLabel,
   FormMessage,
   FormDescription,
-} from "../ui/form";
+} from "./form";
 
 import { ICheckbox } from "@/types";
 
-const CheckboxWithText: React.FC<ICheckbox> = ({
+const CheckboxWrapper: React.FC<ICheckbox> = ({
   control,
   name,
   register,
@@ -50,4 +50,4 @@ const CheckboxWithText: React.FC<ICheckbox> = ({
   );
 };
 
-export default CheckboxWithText;
+export default CheckboxWrapper;

@@ -15,7 +15,7 @@ import {
 
 import { MENU_ITEMS, MOBILE_MENU_BUTTONS } from "@/constants/header";
 
-const MobileNav: React.FC = () => {
+export const MobileNav: React.FC = () => {
   const { menuText, closeText } = MOBILE_MENU_BUTTONS;
   return (
     <Sheet>
@@ -52,5 +52,3 @@ const MobileNav: React.FC = () => {
     </Sheet>
   );
 };
-
-export default MobileNav;

@@ -3,11 +3,11 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
-import Slogan from "../../components/Slogan";
+import { Slogan } from "@/components/Slogan";
 
 import { HOME } from "@/constants/home";
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
   const {
     joinNowButton,
     descriptionContent,
@@ -47,5 +47,3 @@ const Home: React.FC = () => {
     </section>
   );
 };
-
-export default Home;

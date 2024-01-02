@@ -7,7 +7,7 @@ import { SERVICES_LIST } from "@/constants/services";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-const ServicesList: React.FC<IServicesList> = ({
+export const ServicesList: React.FC<IServicesList> = ({
   indexCurrent,
   currentService,
   goToSlide,
@@ -41,5 +41,3 @@ const ServicesList: React.FC<IServicesList> = ({
     </ul>
   );
 };
-
-export default ServicesList;

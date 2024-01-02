@@ -7,12 +7,12 @@ import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
 import { Form } from "@/components/ui/form";
-import Field from "./Field";
-import CheckboxWithText from "./CheckboxWithText";
-import SuccessMessage from "./SuccessMessage";
-import SubmitButton from "./SubmitButton";
+import Field from "@/components/ui/Field";
+import CheckboxWrapper from "@/components/ui/CheckboxWrapper";
+import SuccessMessage from "@/components/ui/SuccessMessage";
+import SubmitButton from "@/components/ui/SubmitButton";
 
-import { careerFormSchema } from "./schema";
+import { careerFormSchema } from "@/lib/schema";
 
 import {
   COMMENTS,
@@ -20,7 +20,7 @@ import {
   INITIAL_CAREER_FORM_DATA,
 } from "@/constants/career";
 
-const CareerForm: React.FC = () => {
+export const CareerForm: React.FC = () => {
   const [successMessage, setSuccessMessage] = React.useState<string | null>(
     null
   );
@@ -77,7 +77,7 @@ const CareerForm: React.FC = () => {
             />
           </div>
           <div className="relative md:flex md:items-start">
-            <CheckboxWithText
+            <CheckboxWrapper
               name="consent"
               control={control}
               register={register}
@@ -96,5 +96,3 @@ const CareerForm: React.FC = () => {
     </>
   );
 };
-
-export default CareerForm;
