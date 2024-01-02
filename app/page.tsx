@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Navbar } from "@/components/Navbar";
-import { About } from "@/sections/About";
-import { Contacts } from "@/sections/Contacts";
-import { Gallery } from "@/sections/Gallery";
-import { Services } from "@/sections/Services";
+// import { Navbar } from "@/components/Navbar";
+// import { About } from "@/sections/About";
+// import { Contacts } from "@/sections/Contacts";
+// import { Gallery } from "@/sections/Gallery";
+// import { Services } from "@/sections/Services";
 import { Home } from "../sections/Home";
 // import { Home } from "@sections/Home";
-import { Career } from "@sections/Career";
+// import { Career } from "@sections/Career";
 
 const Page: React.FC = () => {
   return (
