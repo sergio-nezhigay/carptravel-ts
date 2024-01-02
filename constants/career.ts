@@ -27,9 +27,9 @@ const careerConstants = {
   titlePrefix: "Choose",
   titleSuffix: "us",
   description: `
-        Your chance to join our passionate team in Carpathian tourism.
-        Seeking talented professionals to share our common mission.
-      `,
+    Your chance to join our passionate team in Carpathian tourism.
+    Seeking talented professionals to share our common mission.
+   `,
   whyUsTitle: "Why us?",
   formSectionTitle: "Your Next Adventure Awaits",
 };
@@ -80,4 +80,19 @@ export const FORM_CONFIG: IFormConfig = {
     type: "textarea",
     label: "Message",
   },
+  checkbox: {
+    label: "I confirm my consent to the processing of personal data.",
+    description: "Agree to the terms",
+  },
+  submitSuccessMessage: "Your message has been successfully sent!",
+  button: {
+    label: "Send",
+    labelInProgress: "Sending...",
+  },
 };
+
+export const COMMENTS: string[] = [
+  "Don't miss your opportunity!",
+  "Fill out the form right now",
+  "and join our team!",
+];

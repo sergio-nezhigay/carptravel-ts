@@ -1,7 +1,6 @@
 import React from "react";
 import { useHookFormMask } from "use-mask-input";
 
-import { IField } from "@/types";
 import { Input } from "../ui/input";
 import {
   FormItem,
@@ -11,6 +10,8 @@ import {
   FormField,
   FormDescription,
 } from "../ui/form";
+
+import { IField } from "@/types";
 
 const Field: React.FC<IField> = ({
   register,
@@ -41,7 +42,7 @@ const Field: React.FC<IField> = ({
       defaultValue={""}
       render={({ field }) => (
         <FormItem
-          className={`relative mb-4 grow space-y-1 lg:mb-6 
+          className={`relative mb-4 grow space-y-1 lg:mb-6
           ${type === "textarea" && "flex grow flex-col"} `}
         >
           <FormLabel
@@ -68,7 +69,7 @@ const Field: React.FC<IField> = ({
                 {...registerWithMask(name, "(099) 99 99 999")}
                 placeholder={placeholder}
                 type="text"
-                className={`${inputStyles}  pl-[42px] lg:pl-[56px] `}
+                className={`${inputStyles} pl-[42px] lg:pl-[56px] `}
               />
             </FormControl>
           )}
@@ -83,7 +84,7 @@ const Field: React.FC<IField> = ({
               />
             </FormControl>
           )}
-          <FormDescription className="sr-only">Enter {label}</FormDescription>
+          <FormDescription className="sr-only">{label}</FormDescription>
           <FormMessage
             className={`absolute bottom-[-20px] right-0 text-right text-[12px] font-extralight tracking-[0.20em] ${errorClass}`}
           />

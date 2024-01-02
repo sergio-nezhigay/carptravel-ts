@@ -1,14 +1,21 @@
 import React from "react";
 
-import ContactForm from "../../components/forms/ContactForm";
-import Address from "./Address";
+import ContactForm from "@/components/forms/ContactForm";
 import Title from "@/components/Title";
+import Address from "../../components/Address";
+
+import { CONTACT_DATA } from "@/constants/contacts";
 
 const Contacts: React.FC = () => {
+  const { titlePrefix, titleSuffix, sectionId } = CONTACT_DATA;
   return (
-    <section id="contacts" className="section contacts">
+    <section id={sectionId} className="section contacts">
       <div className="container">
-        <Title prefix="Contact" suffix="us" styles="mb-9 lg:mb-[71px]" />
+        <Title
+          prefix={titlePrefix}
+          suffix={titleSuffix}
+          styles="mb-9 lg:mb-[71px]"
+        />
         <div className="lg:flex lg:gap-5 ">
           <Address />
           <ContactForm />

@@ -6,11 +6,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
-import { contactFormSchema } from "./schema";
 import { Form } from "@/components/ui/form";
 import SubmitButton from "./SubmitButton";
 import Field from "./Field";
 import SuccessMessage from "./SuccessMessage";
+
+import { contactFormSchema } from "./schema";
+
 import { CONTACT_FORM_CONFIG } from "@/constants/contacts";
 
 const ContactForm: React.FC = () => {
@@ -29,10 +31,9 @@ const ContactForm: React.FC = () => {
   });
 
   async function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    console.log("Form values are:", values);
     await new Promise((resolve) => setTimeout(resolve, 1000));
     form.reset();
-    setSuccessMessage("Your message has been successfully sent!");
+    setSuccessMessage(CONTACT_FORM_CONFIG.submitSuccessMessage);
     await new Promise((resolve) => setTimeout(resolve, 3000));
     setSuccessMessage("");
   }
@@ -45,7 +46,7 @@ const ContactForm: React.FC = () => {
           className="relative lg:flex lg:h-full lg:flex-col"
         >
           <div className="h-full grow md:flex md:h-[265px] md:gap-5 lg:h-auto lg:flex-col lg:gap-4">
-            <div className=" md:w-[221.3px] lg:flex  lg:w-full lg:gap-5 ">
+            <div className=" md:w-[221.3px] lg:flex lg:w-full lg:gap-5 ">
               {CONTACT_FORM_CONFIG.inputs.map((field) => (
                 <Field
                   key={field.name}
@@ -68,7 +69,11 @@ const ContactForm: React.FC = () => {
               error={formState.errors}
             />
           </div>
-          <SubmitButton isSubmitting={formState.isSubmitting} />
+          <SubmitButton
+            isSubmitting={formState.isSubmitting}
+            label={CONTACT_FORM_CONFIG.button.label}
+            labelInProgress={CONTACT_FORM_CONFIG.button.labelInProgress}
+          />
           <SuccessMessage message={successMessage} />
         </form>
       </Form>

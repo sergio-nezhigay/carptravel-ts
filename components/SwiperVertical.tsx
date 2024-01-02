@@ -8,7 +8,6 @@ import { GALLERY_IMAGES } from "@/constants/gallery";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "./styles.scss";
 
 const SwiperVertical: React.FC = () => {
   return (
@@ -19,14 +18,14 @@ const SwiperVertical: React.FC = () => {
       wrapperTag="ul"
       className="h-[609px] md:!hidden "
     >
-      {GALLERY_IMAGES.map(({ title, fileName }) => (
+      {GALLERY_IMAGES.map(({ title, fileName, alt }) => (
         <SwiperSlide key={title} tag="li" className="relative">
           <Image
             src={`/images/${fileName}`}
-            alt={title}
+            alt={alt}
             fill
             sizes={"100vh"}
-            className=" object-cover"
+            className="object-cover"
           />
         </SwiperSlide>
       ))}

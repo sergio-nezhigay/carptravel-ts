@@ -1,6 +1,6 @@
 import React from "react";
-import { Checkbox } from "@/components/ui/checkbox";
 
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   FormField,
   FormItem,
@@ -12,7 +12,13 @@ import {
 
 import { ICheckbox } from "@/types";
 
-const CheckboxWithText: React.FC<ICheckbox> = ({ control, name, register }) => {
+const CheckboxWithText: React.FC<ICheckbox> = ({
+  control,
+  name,
+  register,
+  label,
+  description,
+}) => {
   return (
     <FormField
       control={control}
@@ -31,11 +37,9 @@ const CheckboxWithText: React.FC<ICheckbox> = ({ control, name, register }) => {
               </FormControl>{" "}
             </div>
             <FormLabel className="text-[12px] font-extralight leading-[22px] ">
-              I confirm my consent to the processing of personal data.
+              {label}
             </FormLabel>
-            <FormDescription className="sr-only">
-              Agree to the terms
-            </FormDescription>
+            <FormDescription className="sr-only">{description}</FormDescription>
           </FormItem>
           <FormMessage
             className={`absolute bottom-[5px] text-[12px] font-extralight tracking-[0.20em] text-[#FF5757] max-md:max-w-[200px] md:bottom-[-25px] `}

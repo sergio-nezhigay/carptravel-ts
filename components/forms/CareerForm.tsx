@@ -7,13 +7,18 @@ import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
 import { Form } from "@/components/ui/form";
-import { careerFormSchema } from "./schema";
-
 import Field from "./Field";
 import CheckboxWithText from "./CheckboxWithText";
 import SuccessMessage from "./SuccessMessage";
 import SubmitButton from "./SubmitButton";
-import { FORM_CONFIG, INITIAL_CAREER_FORM_DATA } from "@/constants/career";
+
+import { careerFormSchema } from "./schema";
+
+import {
+  COMMENTS,
+  FORM_CONFIG,
+  INITIAL_CAREER_FORM_DATA,
+} from "@/constants/career";
 
 const CareerForm: React.FC = () => {
   const [successMessage, setSuccessMessage] = React.useState<string | null>(
@@ -31,23 +36,20 @@ const CareerForm: React.FC = () => {
   });
 
   async function onSubmit(values: z.infer<typeof careerFormSchema>) {
-    console.log("Form values are:", values);
     await new Promise((resolve) => setTimeout(resolve, 1000));
     form.reset(INITIAL_CAREER_FORM_DATA);
-    setSuccessMessage("Your message has been successfully sent!");
+    setSuccessMessage(FORM_CONFIG.submitSuccessMessage);
     await new Promise((resolve) => setTimeout(resolve, 3000));
     setSuccessMessage("");
   }
 
   return (
     <>
-      <p className="body-extralight-13 mb-6 max-md:ml-[100px] md:mb-8 lg:mb-[14px]">
-        Don&apos;t miss your opportunity!
-        <br />
-        Fill out the form right now
-        <br />
-        and join our team!
-      </p>
+      <div className="body-extralight-13 mb-6 max-md:ml-[100px] md:mb-8 lg:mb-[14px]">
+        {COMMENTS.map((comment) => (
+          <p key={comment}>{comment}</p>
+        ))}
+      </div>
       <Form {...form}>
         <form onSubmit={handleSubmit(onSubmit)} className="relative">
           <div className="items-stretch md:flex md:h-fit md:gap-5 lg:gap-6">
@@ -79,8 +81,14 @@ const CareerForm: React.FC = () => {
               name="consent"
               control={control}
               register={register}
+              label={FORM_CONFIG.checkbox?.label!}
+              description={FORM_CONFIG.checkbox?.description!}
             />
-            <SubmitButton isSubmitting={formState.isSubmitting} />
+            <SubmitButton
+              isSubmitting={formState.isSubmitting}
+              label={FORM_CONFIG.button.label}
+              labelInProgress={FORM_CONFIG.button.labelInProgress}
+            />
           </div>
           <SuccessMessage message={successMessage} />
         </form>

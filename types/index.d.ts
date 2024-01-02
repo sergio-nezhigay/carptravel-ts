@@ -25,16 +25,29 @@ export interface IFormConfig {
     type: "textarea";
     label: string;
   };
+  checkbox?: {
+    label: string;
+    description: string;
+  };
+  submitSuccessMessage: string;
+  button: {
+    label: string;
+    labelInProgress: string;
+  };
 }
 
 export interface ICheckbox {
   register: any;
   name: string;
   control: any;
+  label: string;
+  description: string;
 }
 
 export interface ISubmitButton {
   isSubmitting: boolean;
+  label: string;
+  labelInProgress: string;
 }
 
 export interface ISuccessMessage {
@@ -49,4 +62,10 @@ export interface IServicesList {
   indexCurrent: number;
   currentService: number;
   goToSlide(index: number): any;
+}
+
+export interface ITitle {
+  prefix: string;
+  suffix: string;
+  styles?: string;
 }

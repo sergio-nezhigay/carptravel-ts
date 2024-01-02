@@ -1,3 +1,9 @@
+export const SERVICES = {
+  sectionId: "services",
+  titlePrefix: "We",
+  titleSuffix: "Offer",
+};
+
 export const SERVICES_LIST = [
   {
     title: "ATVs Traveling",
@@ -6,6 +12,8 @@ export const SERVICES_LIST = [
     slogan: "Feel the adrenaline rush",
     imageSmall: "/services-1.jpg",
     imageBG: "/services-bg-1.jpg",
+    altTextSmall: "Quadcycle riding in forest",
+    altTextBG: "Deep forest road",
   },
   {
     title: "Rock climbing",
@@ -14,6 +22,8 @@ export const SERVICES_LIST = [
     slogan: "Destroy your limitations",
     imageSmall: "/services-2.jpg",
     imageBG: "/services-bg-2.jpg",
+    altTextSmall: "People walking with sticks",
+    altTextBG: "Moutain in clouds",
   },
   {
     title: "Hot air ballooning",
@@ -22,6 +32,8 @@ export const SERVICES_LIST = [
     slogan: "Get Inspired",
     imageSmall: "/services-3.jpg",
     imageBG: "/services-bg-3.jpg",
+    altTextSmall: "Air baloon flying",
+    altTextBG: "Landscape in the mountains",
   },
   {
     title: "Skydiving",
@@ -30,6 +42,8 @@ export const SERVICES_LIST = [
     slogan: "Overcome your fears",
     imageSmall: "/services-4.jpg",
     imageBG: "/services-bg-4.jpg",
+    altTextSmall: "Paragliders flying",
+    altTextBG: "House against the background of a hill",
   },
   {
     title: "Rafting",
@@ -38,5 +52,7 @@ export const SERVICES_LIST = [
     slogan: "Trust the flow",
     imageSmall: "/services-5.jpg",
     imageBG: "/services-bg-5.jpg",
+    altTextSmall: "Rafting in a forest",
+    altTextBG: "A river in the forest",
   },
 ];

@@ -3,9 +3,9 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
-import Navbar from "./Navbar";
-import Slogan from "./Slogan";
-import { GOME_CONTENT } from "@/constants/home";
+import Slogan from "../../components/Slogan";
+
+import { HOME } from "@/constants/home";
 
 const Home: React.FC = () => {
   const {
@@ -14,18 +14,14 @@ const Home: React.FC = () => {
     descriptionText,
     title,
     titleStressed,
-  } = GOME_CONTENT;
+  } = HOME;
 
   return (
-    <section className="home  pb-[56px] pt-9 md:pb-[64px] md:pt-6 lg:pb-[104px] ">
+    <section className="home pb-[56px] pt-[105px] md:pb-[64px] md:pt-[121px] lg:pb-[104px] lg:pt-[130px] ">
       <div className="container w-full">
-        <header className="mb-9 md:mb-[64px] lg:mb-[72px]">
-          <Navbar />
-        </header>
-
         <div className="md:grid md:grid-cols-[auto,230px] lg:grid-cols-[auto,305px] ">
           <Slogan />
-          <h1 className="title-thin max-md:mb-6  md:col-start-1 md:row-span-2 md:row-start-1 ">
+          <h1 className="title-thin max-md:mb-6 md:col-start-1 md:row-span-2 md:row-start-1 ">
             <span className="font-medium">{titleStressed}</span>
             {title}
           </h1>
@@ -33,7 +29,7 @@ const Home: React.FC = () => {
             {descriptionText}
           </p>
           <div className="md:col-start-2 md:row-span-2 md:row-start-2 lg:pl-3">
-            <p className="body-extralight mb-6 text-justify  md:mb-7">
+            <p className="body-extralight mb-6 text-justify md:mb-7">
               {descriptionContent}
             </p>
             <ScrollLink
@@ -41,7 +37,7 @@ const Home: React.FC = () => {
               to="contacts"
               smooth={true}
               duration={500}
-              className="corners-border flex-center h-[52px] text-[18px] font-bold  focus:outline-white lg:h-[71px] lg:text-[32px]"
+              className="corners-border flex-center h-[52px] text-[18px] font-bold focus:outline-white lg:h-[71px] lg:text-[32px]"
             >
               {joinNowButton}
             </ScrollLink>
