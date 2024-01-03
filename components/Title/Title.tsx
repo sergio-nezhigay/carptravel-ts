@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ITitle } from "@/types";
+import { ITitle } from "./types";
 
 export const Title: React.FC<ITitle> = ({ prefix, suffix, styles }) => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ICareerWrapper } from "@/types";
+import { ICareerWrapper } from "./types";
 
 export const CareerWrapper: React.FC<ICareerWrapper> = ({ children }) => {
   return (

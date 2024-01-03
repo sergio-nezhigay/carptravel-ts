@@ -7,9 +7,9 @@ import { useForm } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 
 import { Form } from "@/components/ui/form";
-import SubmitButton from "@/components/ui/SubmitButton";
-import Field from "@/components/ui/Field";
-import SuccessMessage from "@/components/ui/SuccessMessage";
+import { Field } from "@/components/ui/Filter";
+import { SubmitButton } from "@/components/ui/SubmitButton";
+import { SuccessMessage } from "@/components/ui/SuccessMessage";
 
 import { contactFormSchema } from "@/lib/schema";
 

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Button } from "./button";
+import { Button } from "@/components/ui/button";
 
-import { ISubmitButton } from "@/types";
+import { ISubmitButton } from "./types";
 
-const SubmitButton: React.FC<ISubmitButton> = ({
+export const SubmitButton: React.FC<ISubmitButton> = ({
   isSubmitting,
   label,
   labelInProgress,
@@ -19,5 +19,3 @@ const SubmitButton: React.FC<ISubmitButton> = ({
     </Button>
   );
 };
-
-export default SubmitButton;

@@ -1,8 +1,8 @@
 import React from "react";
 
-import { ISuccessMessage } from "@/types";
+import { ISuccessMessage } from "./types";
 
-const SuccessMessage: React.FC<ISuccessMessage> = ({ message }) => {
+export const SuccessMessage: React.FC<ISuccessMessage> = ({ message }) => {
   return (
     <>
       {message && (
@@ -13,5 +13,3 @@ const SuccessMessage: React.FC<ISuccessMessage> = ({ message }) => {
     </>
   );
 };
-
-export default SuccessMessage;

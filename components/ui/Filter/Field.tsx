@@ -1,7 +1,7 @@
 import React from "react";
 import { useHookFormMask } from "use-mask-input";
 
-import { Input } from "./input";
+import { Input } from "@/components/ui/input";
 import {
   FormItem,
   FormLabel,
@@ -9,11 +9,11 @@ import {
   FormMessage,
   FormField,
   FormDescription,
-} from "./form";
+} from "@/components/ui/form";
 
-import { IField } from "@/types";
+import { IField } from "./types";
 
-const Field: React.FC<IField> = ({
+export const Field: React.FC<IField> = ({
   register,
   name,
   control,
@@ -93,5 +93,3 @@ const Field: React.FC<IField> = ({
     />
   );
 };
-
-export default Field;

@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-type FieldType = "textarea" | "text" | "tel";
+export type FieldType = "textarea" | "text" | "tel";
 
 export interface IServicesItem {
   title: string;
@@ -11,20 +10,10 @@ export interface IServicesItem {
   altTextBG: string;
 }
 
-export interface IField {
-  register: any;
-  name: string;
-  control: any;
-  label: string;
-  placeholder?: string;
-  type?: FieldType | undefined;
-  error?: any;
-}
-
 interface IFormField {
   name: string;
   placeholder: string;
-  type: "text" | "textarea" | "tel";
+  type: FieldType;
   label: string;
 }
 
@@ -46,28 +35,6 @@ export interface IFormConfig {
   };
 }
 
-export interface ICheckbox {
-  register: any;
-  name: string;
-  control: any;
-  label: string;
-  description: string;
-}
-
-export interface ISubmitButton {
-  isSubmitting: boolean;
-  label: string;
-  labelInProgress: string;
-}
-
-export interface ISuccessMessage {
-  message: string | null;
-}
-
-export interface ICareerWrapper {
-  children: ReactNode;
-}
-
 export interface IServicesList {
   indexCurrent: number;
   currentService: number;
@@ -76,10 +43,4 @@ export interface IServicesList {
 
 export interface IServicesArticle extends IServicesList {
   service: IServicesItem;
-}
-
-export interface ITitle {
-  prefix: string;
-  suffix: string;
-  styles?: string;
 }
