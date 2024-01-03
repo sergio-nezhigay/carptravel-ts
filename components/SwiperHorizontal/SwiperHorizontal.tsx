@@ -47,7 +47,7 @@ export const SwiperHorizontal: React.FC = () => {
       </Button>
       <Button
         type="button"
-        className="swiper-button-next underline-on-hover overflow-visible p-0 outline-offset-1 ring-offset-4 focus:ring-transparent"
+        className="swiper-button-next underline-on-hover p-0  focus:ring-transparent"
       >
         Next
       </Button>
