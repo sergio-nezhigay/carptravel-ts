@@ -12,7 +12,7 @@ export const SubmitButton: React.FC<ISubmitButton> = ({
   return (
     <Button
       type="submit"
-      className="underline-on-hover ml-auto block p-0 text-[30px] font-medium uppercase leading-9 focus:ring-transparent max-md:mt-4 md:mt-[-8px] lg:text-[32px] lg:leading-[38px] "
+      className="underline-on-hover ml-auto block p-0 text-[30px] font-medium uppercase leading-9 focus:ring-transparent max-md:mt-4 md:mt-[-8px] lg:text-[32px] lg:leading-[38px]"
       disabled={isSubmitting}
     >
       {isSubmitting ? labelInProgress : label}

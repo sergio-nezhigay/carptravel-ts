@@ -8,7 +8,7 @@ import useFormPersist from "react-hook-form-persist";
 
 import { Form } from "@/components/ui/form";
 import { CheckboxWrapper } from "@/components/ui/CheckboxWrapper";
-import { Field } from "@/components/ui/Filter";
+import { Field } from "@/components/ui/Field";
 import { SubmitButton } from "@/components/ui/SubmitButton";
 import { SuccessMessage } from "@/components/ui/SuccessMessage";
 
