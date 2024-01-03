@@ -51,9 +51,35 @@ To get started with the project locally on your machine, follow the instructions
 
    The application will be available at [http://localhost:3000](http://localhost:3000). You can start exploring the app from there.
 
-Certainly! Here's a sample paragraph you can use for your GitHub readme:
+## Important Components
 
----
+Here is a list of some of the most crucial components in your project:
+
+- **Address**: Handle and display address-related information.
+
+- **CareerDetails**: Provide detailed information about a career or job position.
+
+- **CareerForm**: Present a form for users to submit career-related information.
+
+- **CareerWrapper**: Wrap and organize career-related content within a structured layout.
+
+- **ContactForm**: Enable users to submit contact information and messages through a form.
+
+- **MobileNav**: Implement a mobile navigation menu for a seamless user experience on smaller screens.
+
+- **Navbar**: Display a navigation bar for easy access to different sections of your application.
+
+- **ServicesArticle**: Showcase detailed information about specific services.
+
+- **ServicesList**: Present a list of services for users to explore.
+
+- **Slogan**: Display a catchy slogan or tagline to capture attention.
+
+- **SwiperHorizontal**: Implement a horizontal swiper/slider for dynamic content presentation.
+
+- **SwiperVertical**: Utilize a vertical swiper/slider for an engaging and interactive user interface.
+
+- **Title**: Create visually appealing titles with optional prefix, suffix, and customizable styles.
 
 ## Usage of some components:
 
