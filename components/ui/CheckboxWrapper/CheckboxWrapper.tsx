@@ -23,6 +23,7 @@ export const CheckboxWrapper: React.FC<ICheckbox> = ({
     <FormField
       control={control}
       name={name}
+      defaultValue={false}
       render={({ field }) => (
         <>
           <FormItem className="flex flex-row items-start space-x-2 space-y-0">
