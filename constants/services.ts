@@ -1,10 +1,12 @@
+import { IServicesItem } from "@/types";
+
 export const SERVICES = {
   sectionId: "services",
   titlePrefix: "We",
   titleSuffix: "Offer",
 };
 
-export const SERVICES_LIST = [
+export const SERVICES_LIST: IServicesItem[] = [
   {
     title: "ATVs Traveling",
     description:

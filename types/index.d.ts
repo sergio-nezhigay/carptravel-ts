@@ -1,6 +1,16 @@
 import { ReactNode } from "react";
 type FieldType = "textarea" | "text" | "tel";
 
+export interface IServicesItem {
+  title: string;
+  description: string;
+  slogan: string;
+  imageSmall: string;
+  imageBG: string;
+  altTextSmall: string;
+  altTextBG: string;
+}
+
 export interface IField {
   register: any;
   name: string;
@@ -62,6 +72,10 @@ export interface IServicesList {
   indexCurrent: number;
   currentService: number;
   goToSlide(index: number): any;
+}
+
+export interface IServicesArticle extends IServicesList {
+  service: IServicesItem;
 }
 
 export interface ITitle {

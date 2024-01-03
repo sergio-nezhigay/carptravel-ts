@@ -25,24 +25,24 @@ const CheckboxWrapper: React.FC<ICheckbox> = ({
       name={name}
       render={({ field }) => (
         <>
-          <FormItem className="flex flex-row items-start space-x-2 space-y-0 ">
+          <FormItem className="flex flex-row items-start space-x-2 space-y-0">
             <div className="flex-center border border-white bg-black p-[3px]">
-              <FormControl className="flex-center border border-white p-1 focus:outline-white ">
+              <FormControl className="flex-center border border-white p-1 transition focus:outline-white">
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
                   className="border border-black"
                   {...register(name)}
                 />
-              </FormControl>{" "}
+              </FormControl>
             </div>
-            <FormLabel className="text-[12px] font-extralight leading-[22px] ">
+            <FormLabel className="text-[12px] font-extralight leading-[22px] transition hover:cursor-pointer">
               {label}
             </FormLabel>
             <FormDescription className="sr-only">{description}</FormDescription>
           </FormItem>
           <FormMessage
-            className={`absolute bottom-[5px] text-[12px] font-extralight tracking-[0.20em] text-[#FF5757] max-md:max-w-[200px] md:bottom-[-25px] `}
+            className={`absolute bottom-[5px] text-[12px] font-extralight tracking-[0.20em] text-[#FF5757] max-md:max-w-[200px] md:bottom-[-25px]`}
           />
         </>
       )}
