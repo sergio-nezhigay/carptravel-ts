@@ -13,11 +13,15 @@ export const ServicesList: React.FC<IServicesList> = ({
   goToSlide,
 }) => {
   return (
+    // <ul className="relative ">
     <ul className="relative flex flex-col gap-4 lg:gap-6">
       {SERVICES_LIST.map((service, index) => {
         const isActive = indexCurrent === index;
         return (
-          <li key={service.title} className="h-fit md:flex lg:justify-between">
+          <li
+            key={service.title}
+            className="h-fit  bg-blue-100 md:flex lg:justify-between"
+          >
             <button
               type="button"
               tabIndex={indexCurrent === currentService ? 0 : -1}
@@ -26,12 +30,13 @@ export const ServicesList: React.FC<IServicesList> = ({
               }}
               className={`${
                 isActive ? "square pl-4 font-medium" : "text-white/50"
-              } text-left text-[20px] font-extralight uppercase leading-[17px] transition hover:translate-x-2 hover:text-white focus:outline-white md:text-[22px] md:leading-[18px] lg:text-[28px] lg:leading-7`}
+              }  bg-red-200 text-left text-[20px] font-extralight uppercase leading-[17px] transition hover:translate-x-2 hover:text-white focus:outline-white md:text-[22px] md:leading-[18px] lg:text-[28px] lg:leading-7`}
             >
-              {service.title}
+              {/* {service.title} */}
+              <span className=" ">{service.title}</span>
             </button>
             {isActive && (
-              <span className="absolute text-xs font-extralight tracking-[0.2em] max-md:right-0 max-md:top-[-48px] md:bottom-[-37px] md:left-0 lg:relative lg:bottom-0 lg:w-[293px] lg:text-left">
+              <span className=" absolute text-xs font-extralight tracking-[0.2em] max-md:right-0 max-md:top-[-48px] md:bottom-[-37px] md:left-0 lg:relative lg:bottom-0 lg:w-[293px] lg:text-left">
                 {service.slogan}
               </span>
             )}
