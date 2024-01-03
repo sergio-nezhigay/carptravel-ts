@@ -16,7 +16,7 @@ export const SwiperVertical: React.FC = () => {
       slidesPerView={3}
       spaceBetween={24}
       wrapperTag="ul"
-      className="h-[609px] md:!hidden "
+      className="h-[609px] md:!hidden"
     >
       {GALLERY_IMAGES.map(({ title, fileName, alt }) => (
         <SwiperSlide key={title} tag="li" className="relative">

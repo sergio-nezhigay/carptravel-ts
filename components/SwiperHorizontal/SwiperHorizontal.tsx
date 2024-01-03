@@ -39,10 +39,10 @@ export const SwiperHorizontal: React.FC = () => {
           />
         </SwiperSlide>
       ))}
-      <Button className="swiper-button-prev underline-on-hover p-0 focus:ring-transparent ">
+      <Button className="swiper-button-prev underline-on-hover p-0 focus:ring-transparent">
         Prev
       </Button>
-      <Button className="swiper-button-next underline-on-hover p-0 focus:ring-transparent ">
+      <Button className="swiper-button-next underline-on-hover p-0 focus:ring-transparent">
         Next
       </Button>
     </Swiper>

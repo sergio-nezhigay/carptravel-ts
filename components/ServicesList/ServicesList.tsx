@@ -13,7 +13,7 @@ export const ServicesList: React.FC<IServicesList> = ({
   goToSlide,
 }) => {
   return (
-    <ul className=" relative flex flex-col gap-4 lg:gap-6 ">
+    <ul className="relative flex flex-col gap-4 lg:gap-6">
       {SERVICES_LIST.map((service, index) => {
         const isActive = indexCurrent === index;
         return (

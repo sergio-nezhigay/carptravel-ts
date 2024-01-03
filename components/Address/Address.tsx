@@ -22,7 +22,7 @@ export const Address: React.FC = () => {
       <p className=" body-small ">{phoneNumbers.label}</p>
       <p className="text-right">
         <Link
-          href={`mailto:${emailAddress}`}
+          href={`mailto:${emailAddress.data}`}
           className="underline-on-hover body-extralight leading-6 focus:outline-white md:col-start-1"
         >
           {emailAddress.data}

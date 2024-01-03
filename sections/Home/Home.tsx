@@ -17,11 +17,11 @@ export const Home: React.FC = () => {
   } = HOME;
 
   return (
-    <section className="home pb-[56px] pt-[105px] md:pb-[64px] md:pt-[121px] lg:pb-[104px] lg:pt-[130px] ">
+    <section className="home pb-[56px] pt-[105px] md:pb-[64px] md:pt-[121px] lg:pb-[104px] lg:pt-[130px]">
       <div className="container w-full">
-        <div className="md:grid md:grid-cols-[auto,230px] lg:grid-cols-[auto,305px] ">
+        <div className="md:grid md:grid-cols-[auto,230px] lg:grid-cols-[auto,305px]">
           <Slogan />
-          <h1 className="title-thin max-md:mb-6 md:col-start-1 md:row-span-2 md:row-start-1 ">
+          <h1 className="title-thin max-md:mb-6 md:col-start-1 md:row-span-2 md:row-start-1">
             <span className="font-medium">{titleStressed}</span>
             {title}
           </h1>

@@ -16,7 +16,7 @@ export const Contacts: React.FC = () => {
           suffix={titleSuffix}
           styles="mb-9 lg:mb-[71px]"
         />
-        <div className="lg:flex lg:gap-5 ">
+        <div className="lg:flex lg:gap-5">
           <Address />
           <ContactForm />
         </div>

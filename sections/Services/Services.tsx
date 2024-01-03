@@ -36,7 +36,7 @@ export const Services: React.FC = () => {
         modules={[Autoplay, EffectFade]}
       >
         {SERVICES_LIST.map((service, indexCurrent) => (
-          <SwiperSlide key={service.title} tag="li" className="relative ">
+          <SwiperSlide key={service.title} tag="li" className="relative">
             <ServicesArticle
               service={service}
               indexCurrent={indexCurrent}

@@ -12,7 +12,7 @@ export const Career: React.FC = () => {
   return (
     <section id={sectionId}>
       <CareerWrapper>
-        <div className="mb-9 md:mb-[5px] md:flex md:justify-between lg:mb-6 ">
+        <div className="mb-9 md:mb-[5px] md:flex md:justify-between lg:mb-6">
           <Title
             prefix={titlePrefix}
             suffix={titleSuffix}

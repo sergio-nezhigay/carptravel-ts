@@ -11,7 +11,7 @@ export const Gallery: React.FC = () => {
 
   return (
     <section id={sectionId} className="section gallery">
-      <div className="container lg:px-0 ">
+      <div className="container lg:px-0">
         <Title
           prefix={titlePrefix}
           suffix={titleSuffix}

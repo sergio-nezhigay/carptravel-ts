@@ -45,7 +45,7 @@ export const ServicesArticle: React.FC<IServicesArticle> = ({
                   className="object-cover "
                 />
               </div>
-              <div className="flex h-[320px] flex-col justify-between md:h-full lg:w-full ">
+              <div className="flex h-[320px] flex-col justify-between md:h-full lg:w-full">
                 <ServicesList
                   indexCurrent={indexCurrent}
                   currentService={currentService}
@@ -64,7 +64,7 @@ export const ServicesArticle: React.FC<IServicesArticle> = ({
           fill
           sizes={"100vh"}
           alt={service.altTextBG}
-          className="z-[-50] object-cover "
+          className="z-[-50] object-cover"
         />
       </article>
     </>
