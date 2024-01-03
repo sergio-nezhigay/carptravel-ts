@@ -153,7 +153,7 @@ import { SuccessMessage } from 'your-components';
 />
 ```
 
-Feel free to customize the values and integrate these components into your project as needed. Make sure to follow any additional documentation provided for each component.
+Feel free to customize the values and integrate these components into your project as needed.
 
 ## Technologies 🛠️
 
