@@ -11,7 +11,7 @@ import { GALLERY_IMAGES } from "@/constants/gallery";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "@/styles/swiper.scss";
+import "./swiper.scss";
 
 export const SwiperHorizontal: React.FC = () => {
   return (
@@ -39,10 +39,16 @@ export const SwiperHorizontal: React.FC = () => {
           />
         </SwiperSlide>
       ))}
-      <Button className="swiper-button-prev underline-on-hover p-0 focus:ring-transparent">
+      <Button
+        type="button"
+        className="swiper-button-prev underline-on-hover p-0 focus:ring-transparent"
+      >
         Prev
       </Button>
-      <Button className="swiper-button-next underline-on-hover p-0 focus:ring-transparent">
+      <Button
+        type="button"
+        className="swiper-button-next underline-on-hover overflow-visible p-0 outline-offset-1 ring-offset-4 focus:ring-transparent"
+      >
         Next
       </Button>
     </Swiper>

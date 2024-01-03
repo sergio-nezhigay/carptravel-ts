@@ -13,22 +13,30 @@ body {
 }
 
 @layer utilities {
+  .section {
+    @apply py-[54px] md:py-[64px] lg:py-[104px];
+  }
+  .body-small {
+    @apply text-[12px] font-extralight leading-5 lg:leading-6;
+  }
+  .body-extralight {
+    @apply text-[14px] font-extralight leading-5 md:text-[16px] lg:text-[18px] lg:leading-6;
+  }
+
+  .body-label {
+    @apply text-[14px] font-normal leading-6 md:text-[16px] lg:text-[18px] lg:leading-6;
+  }
+
+  .body-extralight-13 {
+    @apply text-[14px] font-extralight leading-5 md:text-[13px] lg:text-[18px] lg:leading-6;
+  }
+
+  .title-thin {
+    @apply text-[40px] md:text-[67px] font-thin md:leading-[81px] leading-[56px] lg:text-[98px] lg:leading-[118px] tracking-[-0.04em] uppercase;
+  }
   .swiper-button-next,
   .swiper-button-prev {
-    @apply !text-white font-thin text-[33px] leading-10 uppercase bottom-[17px] lg:bottom-0 !top-auto !h-auto !w-auto;
-  }
-
-  .swiper-button-next {
-    @apply !left-auto !right-[37px] lg:!right-[231px];
-  }
-
-  .swiper-button-prev {
-    @apply !right-auto !left-[37px] lg:!left-[231px];
-  }
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    @apply hidden;
+    color: white;
   }
 
   .overlay::after {
