@@ -53,7 +53,7 @@ To get started with the project locally on your machine, follow the instructions
 
 ## Important Components
 
-Here is a list of some of the most crucial components in your project:
+Here is a list of some of the most crucial components in this project:
 
 - **Address**: Handle and display address-related information.
 
@@ -69,17 +69,17 @@ Here is a list of some of the most crucial components in your project:
 
 - **Navbar**: Display a navigation bar for easy access to different sections of your application.
 
-- **ServicesArticle**: Showcase detailed information about specific services.
+- **ServicesArticle**: Showcase information about specific services.
 
 - **ServicesList**: Present a list of services for users to explore.
 
-- **Slogan**: Display a catchy slogan or tagline to capture attention.
+- **Slogan**: Display a catchy slogan.
 
-- **SwiperHorizontal**: Implement a horizontal swiper/slider for dynamic content presentation.
+- **SwiperHorizontal**: Implement a horizontal swiper/slider for the gallery.
 
-- **SwiperVertical**: Utilize a vertical swiper/slider for an engaging and interactive user interface.
+- **SwiperVertical**: Utilize a vertical swiper/slider for the gallery on mobile devices.
 
-- **Title**: Create visually appealing titles with optional prefix, suffix, and customizable styles.
+- **Title**: Create visually appealing titles with prefix, suffix, and customizable styles.
 
 ## Usage of some components:
 
@@ -157,14 +157,6 @@ Feel free to customize the values and integrate these components into your proje
 
 ## Technologies 🛠️
 
-Certainly! Here's the updated list without numbers:
-
-## Technologies 🛠️
-
--Certainly! Here's the updated list with the Shadcn Component Library link:
-
-## Technologies 🛠️
-
 - **[TypeScript](https://www.typescriptlang.org/)** - Adds static typing to JavaScript for enhanced development. 📝
 - **[React](https://reactjs.org/)** - A JavaScript library for building user interfaces. ⚛️
 - **[Next.js](https://nextjs.org/)** - React framework for building server-rendered applications. ⚛️
@@ -177,12 +169,6 @@ Certainly! Here's the updated list without numbers:
 - **[ESLint](https://eslint.org/)** - A pluggable and configurable linter tool for identifying and fixing problems in JavaScript code 🧹
 - **[Vercel](https://vercel.com/)** - A platform for deploying web applications. 🚀
 - **[clsx](https://github.com/lukeed/clsx)** - A utility for conditionally joining class names together. 🧩
-
-This list now includes the link to the Shadcn Component Library for reference.
-
-This list provides a snapshot of various technologies used in web development, covering frameworks, libraries, tools, and more.
-
-These technologies cover a wide range of web development aspects, from front-end libraries and frameworks to tools for code quality and deployment.
 
 ## Contributing 🤝
 
