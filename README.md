@@ -51,9 +51,83 @@ To get started with the project locally on your machine, follow the instructions
 
    The application will be available at [http://localhost:3000](http://localhost:3000). You can start exploring the app from there.
 
-## Technologies 🛠️
+Certainly! Here's a sample paragraph you can use for your GitHub readme:
 
-Certainly! Here are 10 popular technologies from your list presented in a similar format:
+---
+
+## Usage of some components:
+
+### CareerWrapper Component
+
+```jsx
+import { CareerWrapper } from "your-components";
+
+<CareerWrapper>{/* Your content goes here */}</CareerWrapper>;
+```
+
+### ServicesList Component
+
+```jsx
+import { ServicesList } from 'your-components';
+
+<ServicesList
+  indexCurrent={/* Your value */}
+  currentService={/* Your value */}
+  goToSlide={/* Your function */}
+/>
+```
+
+### Title Component
+
+```jsx
+import { Title } from 'your-components';
+
+<Title
+  prefix={/* Your value */}
+  suffix={/* Your value */}
+  styles={/* Your styles object */}
+/>
+```
+
+### Field Component
+
+```jsx
+import { Field } from 'your-components';
+
+<Field
+  register={/* Your function */}
+  name={/* Your value */}
+  control={/* Your value */}
+  label={/* Your value */}
+  type={/* Your value, default is "text" */}
+  placeholder={/* Your value */}
+  error={/* Your value */}
+/>
+```
+
+### SubmitButton Component
+
+```jsx
+import { SubmitButton } from 'your-components';
+
+<SubmitButton
+  isSubmitting={/* Your boolean value */}
+  label={/* Your value */}
+  labelInProgress={/* Your value */}
+/>
+```
+
+### SuccessMessage Component
+
+```jsx
+import { SuccessMessage } from 'your-components';
+
+<SuccessMessage
+  message={/* Your value */}
+/>
+```
+
+Feel free to customize the values and integrate these components into your project as needed. Make sure to follow any additional documentation provided for each component.
 
 ## Technologies 🛠️
 
