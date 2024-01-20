@@ -2,11 +2,7 @@ import React from "react";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 
-import {
-  TITLE,
-  DESCRIPTION,
-  NEXT_PUBLIC_MAIN_SITE_URL,
-} from "@/constants/layout";
+import { TITLE, DESCRIPTION, VERCEL_URL } from "@/constants/layout";
 
 import "./globals.css";
 
@@ -23,14 +19,14 @@ export const metadata: Metadata = {
     locale: "en",
     type: "website",
   },
-  metadataBase: new URL(NEXT_PUBLIC_MAIN_SITE_URL),
+  metadataBase: new URL(VERCEL_URL),
   manifest: "/meta/manifest.webmanifest",
   robots: "all",
   twitter: {
     card: "summary_large_image",
   },
   alternates: {
-    canonical: NEXT_PUBLIC_MAIN_SITE_URL,
+    canonical: VERCEL_URL,
   },
 };
 
