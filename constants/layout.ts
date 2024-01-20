@@ -1,7 +1,7 @@
 // export const BASE_URL = "https://carptravel-ts.vercel.app/";
 // export const { VERCEL_URL = "http://localhost:3000" } = process.env;
 
-export const VERCEL_URL = process.env.VERCEL_URL || "http://localhost:3000";
+export const TEST_URL = process.env.VERCEL_URL || "http://localhost:3000";
 
 export const TITLE = "CarpTravel";
 export const DESCRIPTION =
