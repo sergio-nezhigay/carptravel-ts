@@ -1,4 +1,5 @@
-export const { NEXT_PUBLIC_MAIN_SITE_URL = "" } = process.env;
+export const { NEXT_PUBLIC_MAIN_SITE_URL = "http://localhost:3000" } =
+  process.env;
 
 export const TITLE = "CarpTravel";
 export const DESCRIPTION =
