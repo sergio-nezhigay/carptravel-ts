@@ -3,7 +3,6 @@
 
 // export const TEST_URL = ${process.env.NEXT_PUBLIC_VERCEL_URL}
 export const TEST_URL = "http://localhost:3000";
-console.log(process.env);
 
 export const TITLE = "CarpTravel";
 export const DESCRIPTION =

@@ -9,6 +9,8 @@ import { Home } from "@/sections/Home";
 import { Career } from "@/sections/Career";
 
 const Page: React.FC = () => {
+  console.log(process.env);
+  console.log(process.env);
   return (
     <>
       <header>
