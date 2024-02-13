@@ -66,10 +66,13 @@ export const Field: React.FC<IField> = ({
             <FormControl className=" h-full">
               <Input
                 {...field}
-                {...registerWithMask(name, "(099) 99 99 999")}
-                placeholder={placeholder}
-                type="text"
-                className={`${inputStyles} pl-[42px] lg:pl-[56px] `}
+                {...registerWithMask(name, "999999999", {
+                  showMaskOnFocus: false,
+                  showMaskOnHover: false,
+                })}
+                placeholder=""
+                type="tel"
+                className={`${inputStyles} flex-center pl-[40px] lg:pl-[58px] `}
               />
             </FormControl>
           )}

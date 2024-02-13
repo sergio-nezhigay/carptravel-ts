@@ -77,7 +77,8 @@ body {
   }
   .phone-prefix::before {
     @apply absolute font-extralight text-[13px] lg:text-[20px] leading-6 bottom-[-31px] md:bottom-[-33px] lg:bottom-[-35px]  left-2 text-white;
-    content: "+38";
+    content: "+380";
+    letter-spacing: normal;
   }
 
   .corners-border {
